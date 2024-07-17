@@ -12,6 +12,6 @@ const router = createBrowserRouter([
   }
 ]);
 const RoutesWrapper = () => {
-  return <RouterProvider router={router}></RouterProvider>;
+  return <RouterProvider router={router} />;
 };
 export default RoutesWrapper;
