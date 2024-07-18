@@ -13,8 +13,8 @@ import { Button } from './common/button';
 
 const HeroSection = () => {
   return (
-    <section className="w-full bg-inherit px-4  2xl:container flex flex-col md:flex-row justify-center gap-1 items-center text-blackCustom  mt-10 md:mt-32 border  h-fit">
-      <main className="w-full md:w-10/12  flex flex-col-reverse md:flex-row items-center justify-between flex-1  gap-20 me-0 md:gap-10 md:me-16 lg:me-32 border-2">
+    <section className="w-full bg-inherit px-4  2xl:container flex flex-col md:flex-row justify-center gap-1 items-center text-blackCustom  mt-10 md:mt-32 h-fit">
+      <main className="w-full md:w-10/12  flex flex-col-reverse md:flex-row items-center justify-between flex-1  gap-20 me-0 md:gap-10 md:me-16 lg:me-32 ">
         <div className="flex flex-col gap-8 ms-0 md:ms-10 w-full md:w-1/2">
           <span className="w-full">
             <p className="font-light ">Hi! I'm Favour Eliab,</p>

@@ -26,7 +26,7 @@ const EyeCatcher = () => {
   }, []);
   return (
     <motion.div
-      className="text-blackCustom py-4 px-10 rounded-[20px] border-blackCustom border  justify-center gap-10 hidden md:flex mx-4 my-8"
+      className="text-blackCustom py-4 px-10 rounded-[20px] border-blackCustom border  justify-center gap-10 hidden md:flex  my-8"
       whileHover={{
         scale: 1.03,
         rotate: '1deg',
@@ -44,19 +44,19 @@ const EyeCatcher = () => {
         }}
       >
         <p className="font-bold text-3xl md:text-5xl  text-blueCustom flex ">
-          <motion.p>{roundedProjects}</motion.p>+
+          <motion.span>{roundedProjects}</motion.span>+
         </p>
         <p className="font-light ">Projects worked on so far</p>
       </motion.span>
       <span className="max-w-60 w-full flex gap-1 md:gap-4 ">
         <p className="font-bold text-3xl md:text-5xl text-blueCustom flex ">
-          <motion.p>{roundedExperience}</motion.p>+
+          <motion.span>{roundedExperience}</motion.span>+
         </p>
         <p className="font-light ">Years of experience</p>
       </span>
       <span className="max-w-60 w-full flex gap-1 md:gap-4 ">
         <p className="font-bold text-3xl md:text-5xl text-blueCustom flex ">
-          <motion.p>{roundedCustomers}</motion.p> +
+          <motion.span>{roundedCustomers}</motion.span> +
         </p>
 
         <p className="font-light ">Happily Served customers</p>
