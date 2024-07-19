@@ -1,4 +1,4 @@
-import { IconArrowMoveRight, IconBriefcase, IconRefresh } from '@tabler/icons-react';
+import { IconArrowNarrowRight, IconCreditCard, IconRefresh } from '@tabler/icons-react';
 import { motion, useMotionValue } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { cn } from '../utils';
@@ -25,7 +25,7 @@ const MyServices = () => {
   return (
     <section className="w-full bg-grayCustom text-blackCustom flex flex-col items-center justify-center px-4 py-16">
       <div className="flex flex-row gap-2 mb-5">
-        <IconBriefcase stroke={1} className="w-10 h-10 " />
+        <IconCreditCard stroke={1} className="w-10 h-10 " />
         <p className="font-bold text-3xl">My offered Services</p>
       </div>
       <main className="w-full 2xl:container flex flex-col gap2 relative ">
@@ -70,7 +70,7 @@ const MyServices = () => {
                 translateX: 10
               }}
             >
-              <IconArrowMoveRight
+              <IconArrowNarrowRight
                 stroke={0.5}
                 className={cn(
                   'w-16 h-16 text-blackCustom',
