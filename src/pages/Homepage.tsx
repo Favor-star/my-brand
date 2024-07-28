@@ -5,6 +5,7 @@ import HeroSection from '../components/HeroSection';
 import MyServices from '../components/MyServices';
 import MyWorks from '../components/MyWorks';
 import { motion, useScroll, useMotionValue, useSpring } from 'framer-motion';
+import EducExp from '../components/EducExp';
 
 const Homepage = () => {
   const { scrollYProgress } = useScroll();
@@ -47,6 +48,7 @@ const Homepage = () => {
       </div>
       <MyServices />
       <MyWorks />
+      <EducExp />
       <motion.div
         className="fixed right-1 top-0 h-full w-2 bg-blackCustom block "
         style={{ scaleY: scaleY, transformOrigin: 'top' }}
