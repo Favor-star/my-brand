@@ -28,7 +28,7 @@ const MyServices = () => {
         <IconCreditCard stroke={1} className="w-10 h-10 " />
         <p className="font-bold text-3xl">My offered Services</p>
       </div>
-      <main className="w-full 2xl:container flex flex-col gap2 relative ">
+      <main className="w-full max-w-screen-xl flex flex-col gap2 relative ">
         {services.map((service, index) => (
           <div
             className="flex gap-5 justify-between items-center py-3 px-2 border-b border-b-blackCustom relative z-10"

@@ -9,6 +9,7 @@ export default {
       colors: {
         blueCustom: '#2454FF',
         grayCustom: '#E5E4E2',
+        grayOp40: '#E5E4E266',
         blackCustom: '#212830'
       }
     }
