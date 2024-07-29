@@ -26,10 +26,10 @@ const EyeCatcher = () => {
   }, []);
   return (
     <motion.div
-      className="text-blackCustom py-4 px-10 rounded-[20px] border-blackCustom border  justify-center gap-10 hidden md:flex  my-8"
+      className="text-blackCustom py-4 px-10 rounded-[20px]  bg-grayOp40 justify-center gap-10 hidden md:flex  my-8"
       whileHover={{
-        scale: 1.03,
-        rotate: '1deg',
+        scale: 1.01,
+        // rotate: '.5deg',
         transition: {
             duration: 0.5,
             type: "spring"

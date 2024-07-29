@@ -6,7 +6,7 @@ import { Button } from './common/button';
 const Header = () => {
   return (
     <section className="w-full flex items-start justify-center mt-5 mb-5 px-4 bg-inherit ">
-      <div className="w-full 2xl:container text-blackCustom bg-inherit flex flex-row justify-between">
+      <div className="w-full  max-w-screen-xl  text-blackCustom bg-inherit flex flex-row justify-between">
         <span className="flex gap-2 items-center w-1/2">
           <p className="text-blueCustom font-bold text-2xl">F</p>
           <a href="mailto:favoureliab@gmail.com" className="text-lg font-medium text-blackCustom">
