@@ -8,7 +8,8 @@ const MyWorks = () => {
         <IconBriefcase stroke={1} className="w-10 h-10 " />
         <p className="font-bold text-3xl">My offered Services</p>
       </div>
-      <main className="w-full 2xl:container grid grid-cols-customAuto gap-10">
+      <main className="w-full max-w-screen-xl grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 ">
+        <WorkCard />
         <WorkCard />
         <WorkCard />
         <WorkCard />
