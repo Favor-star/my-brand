@@ -1,6 +1,6 @@
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { useState, RefObject, useEffect } from 'react';
+import {  RefObject, useEffect } from 'react';
 import { useMotionValue, useSpring, frame } from 'framer-motion';
 
 export const cn = (...className: ClassValue[]) => {
