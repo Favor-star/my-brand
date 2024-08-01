@@ -25,6 +25,14 @@ const Header = ({ isTextWhite }: HeaderProps) => {
         <nav className=" flex-1 hidden items-center gap-5 md:flex text-inherit">
           <ul className="flex items-center flex-1 justify-between gap-3 list-none text-inherit">
             <NavLink
+              to="/"
+              className={({ isActive }: { isActive: boolean }) =>
+                cn('font-medium capitalize cursor-pointer pb-1', isActive ? 'border-b-2 border-blackCustom' : 'border-none')
+              }
+            >
+             Home
+            </NavLink>
+            <NavLink
               to="about"
               className={({ isActive }: { isActive: boolean }) =>
                 cn('font-medium capitalize cursor-pointer pb-1', isActive ? 'border-b-2' : 'border-none')

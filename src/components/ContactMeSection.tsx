@@ -24,7 +24,7 @@ const ContactMeSection = () => {
   };
   return (
     <div className="w-full flex items-center justify-center py-16  bg-grayCustom text-blackCustom">
-      <main className="w-full grid grid-cols-2 max-w-screen-xl px-4">
+      <main className="w-full grid grid-cols-1 md:grid-cols-2 max-w-screen-xl px-4">
         <ContactMeForm />
         <section className="w-full ms-20 flex flex-col gap-10 justify-center items-start">
           <div className="flex gap-5 items-center">

@@ -18,7 +18,8 @@ const ReviewSection = () => {
   }, [reviewSlideAPI]);
 
   return (
-    <section className="w-full max-w-screen-xl flex flex-col gap-4 justify-center items-center my-8 mt-16 px-4">
+    <section className="w-full max-w-screen-xl flex flex-col gap-4 justify-center items-center my-8 mt-16 px-4 relative">
+      <div className="absolute top-1/2 left-1/2 w-[500px] aspect-square bg-blueCustom -z-10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 bg-opacity-10"></div>
       <p className="font-bold text-3xl">They are happy with my services</p>
       <span className="flex gap-8">
         <p className="text-center self-start ">

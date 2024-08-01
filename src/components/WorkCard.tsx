@@ -43,13 +43,13 @@ const WorkCard = () => {
         style={{ right: '50%', translateX: '50%' }}
         animate={
           isCardHovered
-            ? { scale: 1.05, transition: { duration: 0.4 } }
-            : { scale: 1, transition: { duration: 0.4 } }
+            ? { scale: 1, y: 0, opacity: 1, transition: { duration: 0.6, type: 'spring' } }
+            : { scale: 1, y: 10, opacity: 0, transition: { duration: 0.6, type: 'spring' } }
         }
       >
         <span className="w-full flex-1 text-white flex flex-col gap-0">
           <p className=" w-full text-xl font-medium">Project Name</p>
-          <p className=" w-full max-w-[300px] h-fit  text-ellipsis font-light text-sm">
+          <p className=" w-full  h-fit font-light ">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </span>
