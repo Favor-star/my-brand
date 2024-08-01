@@ -8,7 +8,7 @@ const WorkCard = () => {
 
   return (
     <motion.div
-      className="w-full p-5 rounded-[30px]  bg-grayCustom bg-opacity-50 flex items-center justify-center relative "
+      className="w-full p-5 rounded-[30px] border border-blueCustom bg-grayCustom bg-opacity-50 flex items-center justify-center relative "
       initial={{
         opacity: 0.1,
 

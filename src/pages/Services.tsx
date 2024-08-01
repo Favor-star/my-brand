@@ -8,7 +8,7 @@ import SubHeroSection from '../components/SubHeroSection';
 const Services = () => {
   return (
     <main className="w-full flex flex-col justify-center items-center relative">
-      <SubHeroSection title='services' />
+      <SubHeroSection />
       <p className="w-full max-w-screen-xl  text-center px-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque inventore eligendi ab
         dicta consequuntur necessitatibus officia, aperiam explicabo in quia ea tempora praesentium
