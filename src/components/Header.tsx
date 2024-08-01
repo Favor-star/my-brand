@@ -22,20 +22,26 @@ const Header = ({ isTextWhite }: HeaderProps) => {
             hire@gmail.com
           </a>
         </span>
-        <nav className=" flex-1 hidden items-center gap-5 md:flex text-inherit">
-          <ul className="flex items-center flex-1 justify-between gap-3 list-none text-inherit">
+        <nav className=" flex-1 hidden items-center gap-4 md:flex text-inherit justify-between">
+          <ul className="hidden lg:flex items-center flex-1 justify-between gap-5 list-none text-inherit">
             <NavLink
               to="/"
               className={({ isActive }: { isActive: boolean }) =>
-                cn('font-medium capitalize cursor-pointer pb-1', isActive ? 'border-b-2 border-blackCustom' : 'border-none')
+                cn(
+                  'font-medium capitalize cursor-pointer pb-1',
+                  isActive ? 'border-b-2 border-blackCustom' : 'border-none'
+                )
               }
             >
-             Home
+              Home
             </NavLink>
             <NavLink
               to="about"
               className={({ isActive }: { isActive: boolean }) =>
-                cn('font-medium capitalize cursor-pointer pb-1', isActive ? 'border-b-2' : 'border-none')
+                cn(
+                  'font-medium capitalize cursor-pointer text-nowrap pb-1',
+                  isActive ? 'border-b-2' : 'border-none'
+                )
               }
             >
               About Me
@@ -43,7 +49,10 @@ const Header = ({ isTextWhite }: HeaderProps) => {
             <NavLink
               to="/portfolio"
               className={({ isActive }: { isActive: boolean }) =>
-                cn('font-medium capitalize cursor-pointer pb-1', isActive ? 'border-b-2' : 'border-none')
+                cn(
+                  'font-medium capitalize cursor-pointer pb-1',
+                  isActive ? 'border-b-2' : 'border-none'
+                )
               }
             >
               Portfolio
@@ -51,7 +60,10 @@ const Header = ({ isTextWhite }: HeaderProps) => {
             <NavLink
               to="/my-blog"
               className={({ isActive }: { isActive: boolean }) =>
-                cn('font-medium capitalize cursor-pointer pb-1', isActive ? 'border-b-2' : 'border-none')
+                cn(
+                  'font-medium capitalize cursor-pointer text-nowrap pb-1',
+                  isActive ? 'border-b-2' : 'border-none'
+                )
               }
             >
               My Blog
@@ -59,13 +71,25 @@ const Header = ({ isTextWhite }: HeaderProps) => {
             <NavLink
               to="/services"
               className={({ isActive }: { isActive: boolean }) =>
-                cn('font-medium capitalize cursor-pointer pb-1', isActive ? 'border-b-2' : 'border-none')
+                cn(
+                  'font-medium capitalize cursor-pointer pb-1',
+                  isActive ? 'border-b-2' : 'border-none'
+                )
               }
             >
               Services
             </NavLink>
           </ul>
-
+          <motion.span
+            className="text-inherit"
+            whileHover={{
+              translateY: -5,
+              rotate: '-6deg',
+              scale: 1.1
+            }}
+          >
+            <IconMenu2 className="text-inherit lg:hidden " size={45} strokeWidth={1} />
+          </motion.span>
           <Button className="text-sm">Hire Me!</Button>
         </nav>
         <motion.span

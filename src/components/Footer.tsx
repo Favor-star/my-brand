@@ -9,7 +9,7 @@ import {
 } from '@tabler/icons-react';
 import CoffeCup from '../assets/icons/coffee.svg';
 import { Button } from './common/button';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 const Footer = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center bg-blueCustom text-white py-10 mt-10">
@@ -20,26 +20,28 @@ const Footer = () => {
         >
           F
         </Link>
-        <div className="font-light flex gap-4 items-center">
-          <p>Are you impressed? Show me how impressed you are!</p>
+        <div className="font-light flex flex-col md:flex-row gap-4 items-center">
+          <p className=" text-center md:text-left">
+            Are you impressed? Show me how impressed you are!
+          </p>
           <Button className="bg-white text-blueCustom flex flex-row items-center gap-2">
             Buy Me A Coffee
             <img src={CoffeCup} alt="" className="w-8 " />
           </Button>
         </div>
-        <div className="flex w-10/12 justify-center gap-8 items-center">
-          <Link to="/about" className="font-medium text-lg ">
+        <div className="flex w-10/12 justify-center  flex-col sm:flex-row gap-2 sm:gap-8 items-center">
+          <NavLink to="/about" className="font-medium text-lg ">
             About
-          </Link>
-          <Link to="/portfolio" className="font-medium text-lg ">
+          </NavLink>
+          <NavLink to="/portfolio" className="font-medium text-lg ">
             Portfolio
-          </Link>
-          <Link to="/services" className="font-medium text-lg ">
+          </NavLink>
+          <NavLink to="/services" className="font-medium text-lg ">
             Services
-          </Link>
-          <Link to="/my-blog" className="font-medium text-lg ">
+          </NavLink>
+          <NavLink to="/my-blog" className="font-medium text-lg ">
             My blog
-          </Link>
+          </NavLink>
         </div>
 
         <div className="flex gap-4 items-center justify-center">

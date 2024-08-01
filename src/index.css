@@ -15,15 +15,12 @@
 ::-webkit-scrollbar {
   width: 10px;
   height: 8px;
-background: #cccccc;
-/* background-color: red; */
+  background: #cccccc;
+  /* background-color: red; */
 }
 
-
 ::-webkit-scrollbar-track {
-  background-color: #E5E4E266;
-
-
+  background-color: #e5e4e266;
 }
 /* ::-webkit-scrollbar-corner {
   display: none;
@@ -33,11 +30,12 @@ background: #cccccc;
   height: 10px;
 }
 ::-webkit-scrollbar-thumb {
- 
   background-color: #212830;
- 
 }
- 
+
 .footer_links {
-  @apply w-10 h-10 border border-white p-[5px] rounded-full bg-inherit text-white
+  @apply w-10 h-10 border border-white p-[5px] rounded-full bg-inherit text-white;
+}
+.work__with__me__icons {
+  @apply w-8 h-8 p-1 rounded-full border border-blackCustom;
 }
