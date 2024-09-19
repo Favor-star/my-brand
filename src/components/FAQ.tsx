@@ -31,13 +31,15 @@ const FAQ = () => {
   };
   return (
     <motion.div
-      className="w-full flex flex-col gap-1 p-5 bg-grayCustom rounded-xl cursor-pointer"
-      onClick={() => setIsClicked(!isClicked)}
+      className="w-full flex flex-col gap-1 p-5 bg-grayCustom rounded-xl "
       variants={containerVariants}
       initial="folded"
       animate={isClicked ? 'unfolded' : 'folded'}
     >
-      <span className="w-full flex justify-between items-center">
+      <span
+        className="w-full flex justify-between items-center cursor-pointer select-none"
+        onClick={() => setIsClicked(!isClicked)}
+      >
         <p className="font-medium">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, earum. lorem, ipsum dolor?
         </p>

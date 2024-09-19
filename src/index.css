@@ -39,3 +39,70 @@
 .work__with__me__icons {
   @apply w-8 h-8 p-1 rounded-full border border-blackCustom;
 }
+.embla_before::before {
+  content: '';
+  @apply absolute w-full md:w-[1.5px] h-[1.5px] md:h-full bg-blackCustom bg-opacity-50 left-0 md:left-5 bottom-5 md:bottom-0;
+}
+.header__links::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: white;
+  bottom: -2.5px;
+  left: 0px;
+  width: 0%;
+  height: 1.5px;
+  transition: width 0.3s ease-in-out;
+}
+.header__links:hover::after {
+  width: 100%;
+}
+
+/*TEST*/
+.embla {
+  overflow: hidden;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+}
+.embla::before {
+  content: '';
+  @apply w-full absolute bottom-7 left-0 h-[1px] bg-blackCustom block md:left-7 md:bottom-0 md:w-[1px] md:h-full;
+}
+.embla__container {
+  display: flex;
+  gap: 20px;
+}
+
+.embla__slide {
+  flex: 0 0 90%;
+  min-width: 0;
+}
+
+.embla-vertical {
+  height: 520px;
+}
+
+.embla-vertical .embla__container {
+  flex-direction: column;
+  height: 100%;
+  gap: 2;
+}
+
+.embla-vertical .embla__slide {
+  height: fit-content;
+}
+@media only screen and (min-width: 768px) {
+  .embla__slide {
+    flex: auto;
+    height: fit-content;
+  }
+}
+
+/* .clipping {
+  clip-path: circle(50%);
+  transition: all .4 ease-in-out;
+}
+.clipping:hover {
+   clip-path: circle(0%);
+} */
