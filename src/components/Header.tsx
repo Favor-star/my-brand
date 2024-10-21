@@ -28,7 +28,7 @@ const Header = ({ isTextWhite }: HeaderProps) => {
               to="/"
               className={({ isActive }: { isActive: boolean }) =>
                 cn(
-                  'font-medium capitalize cursor-pointer pb-1',
+                  'font-medium capitalize cursor-pointer pb-1 relative header__links',
                   isActive ? 'border-b-2 border-blackCustom' : 'border-none'
                 )
               }
@@ -36,10 +36,10 @@ const Header = ({ isTextWhite }: HeaderProps) => {
               Home
             </NavLink>
             <NavLink
-              to="about"
+              to="/about"
               className={({ isActive }: { isActive: boolean }) =>
                 cn(
-                  'font-medium capitalize cursor-pointer text-nowrap pb-1',
+                  'font-medium capitalize cursor-pointer text-nowrap pb-1 relative header__links ',
                   isActive ? 'border-b-2' : 'border-none'
                 )
               }

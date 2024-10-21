@@ -12,7 +12,12 @@ const SubHeroSection = ({ title }: SubHeroSectionProps) => {
     <>
       <section
         className="w-full min-h-[650px] flex flex-col gap-2 items-center justify-center text-white relative mb-7"
-        style={{ background: `url(${bgImg2})`, objectFit: 'cover', objectPosition: '0%' }}
+        style={{
+          background: `url(${bgImg2})`,
+          objectFit: 'cover',
+          backgroundPosition: 'top left',
+          backgroundAttachment: 'fixed'
+        }}
       >
         <div className="w-full items-start absolute top-0 left-0 justify-self-start z-20">
           <Header isTextWhite={true} />

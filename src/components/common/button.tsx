@@ -12,7 +12,7 @@ export interface ButtonProps
 }
 
 const buttonVariants = cva(
-  'inline-flex gap-2 rounded-s-full rounded-e-full px-5 py-2 font-light text-nowrap',
+  'inline-flex gap-2 rounded-s-full rounded-e-full px-5 py-3 font-light text-nowrap',
   {
     variants: {
       variant: {
