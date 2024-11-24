@@ -1,4 +1,4 @@
-import React, {  useCallback } from 'react';
+import React, { useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { Slot } from '@radix-ui/react-slot';
@@ -12,7 +12,7 @@ export interface ButtonProps
 }
 
 const buttonVariants = cva(
-  'inline-flex gap-2 rounded-s-full rounded-e-full px-5 py-3 font-light text-nowrap',
+  'inline-flex items-center gap-2 rounded-xl px-4 py-2 font-light text-nowrap',
   {
     variants: {
       variant: {
@@ -20,7 +20,7 @@ const buttonVariants = cva(
         outline: 'bg-inherit text-blueCustom border border-blueCustom'
       },
       size: {
-        default: 'text-lg font-light'
+        default: 'text-sm font-light'
       }
     },
     defaultVariants: {
@@ -43,11 +43,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <motion.span
+        // whileHover={{
+        //   translateY: [null, -5],
+        //   scale: [null, 1.01, 1.03, 1.06],
+        //   transition: { duration: 0.2 }
+        // }}
         whileHover={{
-          translateY: [null, -5],
-          scale: [null, 1.01, 1.03, 1.06],
-          transition: { duration: 0.2 }
+          scale: 1.1
         }}
+        whileTap={{ scale: 0.9 }}
+        transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         className="w-fit"
         onMouseEnter={() => handleHoverChange(true)}
         onMouseLeave={() => handleHoverChange(false)}

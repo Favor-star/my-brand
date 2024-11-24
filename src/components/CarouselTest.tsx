@@ -133,7 +133,7 @@ const EducationCard: React.FC<EducationCardProps> = ({ item }: EducationCardProp
         />
       </span>
       <motion.div
-        className="w-full flex-1 flex flex-col justify-start  p-4 rounded-2xl bg-white cursor-default select-none relative overflow-hidden"
+        className="w-full flex-1 flex flex-col justify-start  p-4 rounded-xl bg-white cursor-default select-none relative overflow-hidden"
         initial={{
           opacity: 0.1,
           translateX: -10,

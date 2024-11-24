@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 
 interface ArrowsProps {
   onLeftClick?: () => void;
-  onRightCLick?: () => void;
+  onRightClick?: () => void;
 }
-const Arrows = ({ onLeftClick, onRightCLick }: ArrowsProps) => {
+const Arrows = ({ onLeftClick, onRightClick }: ArrowsProps) => {
   return (
-    <div className="flex flex-row gap-3 w-fit cursor-pointer">
+    <div className=" flex-row gap-3 w-fit cursor-pointer hidden sm:flex">
       <motion.span
         whileHover={{
           x: -10,
@@ -16,11 +16,15 @@ const Arrows = ({ onLeftClick, onRightCLick }: ArrowsProps) => {
             type: 'spring'
           }
         }}
+        whileTap={{
+          scale: 0.9
+        }}
+        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
         onClick={onLeftClick}
       >
         <IconArrowNarrowLeft
           stroke={1}
-          className="w-14 h-12 p-1  rounded-xl border-blueCustom border text-blueCustom transition-all"
+          className="w-12 h-10 p-1  rounded-lg border-blueCustom border text-blueCustom transition-all"
         />
       </motion.span>
       <motion.span
@@ -32,11 +36,13 @@ const Arrows = ({ onLeftClick, onRightCLick }: ArrowsProps) => {
             type: 'spring'
           }
         }}
-        onClick={onRightCLick}
+        whileTap={{ scale: 0.9 }}
+        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+        onClick={onRightClick}
       >
         <IconArrowNarrowRight
           stroke={1}
-          className="w-14 h-12 p-1  rounded-xl border-blueCustom border text-blueCustom transition-all"
+          className="w-12 h-10 p-1  rounded-lg border-blueCustom border text-blueCustom transition-all"
         />
       </motion.span>
     </div>

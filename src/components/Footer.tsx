@@ -9,11 +9,12 @@ import {
 } from '@tabler/icons-react';
 import CoffeCup from '../assets/icons/coffee.svg';
 import { Button } from './common/button';
-import { Link, NavLink } from 'react-router-dom';
+import { Link,  } from 'react-router-dom';
+
 const Footer = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center bg-blueCustom text-white py-10 mt-10">
-      <main className="w-full max-w-screen-xl flex flex-col justify-center items-center gap-5 px-4">
+    <div className="w-full flex flex-col items-center justify-center bg-blackCustom text-white py-10 mt-10">
+      <main className="w-full max-w-screen-xl flex flex-col justify-center items-center gap-3 px-4">
         <Link
           to="/"
           className="text-2xl font-extrabold p-2  flex justify-center items-center w-fit h-fit aspect-square rounded-full bg-white  text-blueCustom"
@@ -29,7 +30,7 @@ const Footer = () => {
             <img src={CoffeCup} alt="" className="w-8 " />
           </Button>
         </div>
-        <div className="flex w-10/12 justify-center  flex-col sm:flex-row gap-2 sm:gap-8 items-center">
+        {/* <div className="flex w-10/12 justify-center  flex-col sm:flex-row gap-2 sm:gap-8 items-center">
           <NavLink to="/about" className="font-medium text-lg ">
             About
           </NavLink>
@@ -42,8 +43,9 @@ const Footer = () => {
           <NavLink to="/my-blog" className="font-medium text-lg ">
             My blog
           </NavLink>
-        </div>
-
+          <VaulDrawer />
+        </div> */}
+        <div>Follow me for more</div>
         <div className="flex gap-4 items-center justify-center">
           <IconMail stroke={1} className="footer_links" />
           <IconBrandInstagram stroke={1} className="footer_links" />
@@ -51,6 +53,8 @@ const Footer = () => {
           <IconBrandUpwork stroke={1} className="footer_links" />
           <IconBrandWhatsapp stroke={1} className="footer_links" />
           <IconBrandGithub stroke={1} className="footer_links" />
+
+          {/* <FloatingDock items={items} /> */}
         </div>
         <div className="flex gap-1 items-center justify-center mt-4">
           <IconCopyright className="w-5" />
@@ -63,3 +67,36 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// const items = [
+//   {
+//     title: 'Github',
+//     icon: <IconBrandGithub stroke={1.25} size={30} />,
+//     href: ''
+//   },
+//   {
+//     title: 'X (formely Twitter)',
+//     icon: <IconBrandX stroke={1.25} size={30} />,
+//     href: ''
+//   },
+//   {
+//     title: 'Instagram',
+//     icon: <IconBrandInstagram stroke={1.25} size={30} />,
+//     href: ''
+//   },
+//   {
+//     title: 'Whatsapp',
+//     icon: <IconBrandWhatsapp stroke={1.25} size={30} />,
+//     href: ''
+//   },
+//   {
+//     title: 'E-mail',
+//     icon: <IconMail stroke={1.25} size={30} />,
+//     href: ''
+//   },
+//   {
+//     title: 'Dribble',
+//     icon: <IconBrandDribbble stroke={1.25} size={30} />,
+//     href: ''
+//   }
+// ];

@@ -1,30 +1,60 @@
-import { IconBrandFigma } from '@tabler/icons-react';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { IconBrandFigma, IconChecks } from '@tabler/icons-react';
+import { easeInOut, motion } from 'framer-motion';
+import { useState, useCallback } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoscroll from 'embla-carousel-auto-scroll';
+import Arrows from './common/Arrows';
+import { cn } from '../utils';
+import { usePrevNextButtons } from '../hooks/usePrevNextButtons';
 
-const OtherSkills = () => {
+const OtherSkills = ({ fromHome = false }: { fromHome?: boolean }) => {
+  const [skillsSlideRef, skillsSlideAPI] = useEmblaCarousel({ loop: true, slidesToScroll: 2 }, [
+    Autoscroll({ speed: 0.8, startDelay: 500 })
+  ]);
+  const { nextWhileMoving, onNextButtonClick, onPrevButtonClick } =
+    usePrevNextButtons(skillsSlideAPI);
+
   return (
-    <div className="w-full flex flex-col items-center justify-center">
-      <section className="w-full max-w-screen-xl  ">
-        <p className="">Apart from technical skills, I also posseses the following skills:</p>
-        <div className="w-full flex justify-between gap-5 items-center flex-wrap">
-          <p className="w-[322px] p-3 bg-grayCustom rounded-lg">Comunication SKills</p>
-          <p className="w-[322px] p-3 bg-grayCustom rounded-lg">Comunication SKills</p>
-          <p className="w-[322px] p-3 bg-grayCustom rounded-lg">Comunication SKills</p>
-          <p className="w-[322px] p-3 bg-grayCustom rounded-lg">Comunication SKills</p>
-          <p className="w-[322px] p-3 bg-grayCustom rounded-lg">Comunication SKills</p>
-          <p className="w-[322px] p-3 bg-grayCustom rounded-lg">Comunication SKills</p>
+    <div className="w-full flex flex-col items-center justify-center px-3 ">
+      <section className="w-full max-w-screen-lg  ">
+        <div className="w-full flex justify-between items-center my-5">
+          <p className="font-medium text-2xl">Skills</p>
+          <Arrows
+            onLeftClick={() => nextWhileMoving(onPrevButtonClick)}
+            onRightClick={() => nextWhileMoving(onNextButtonClick)}
+          />
         </div>
-        <div className="flex gap-4 w-full items-center justify-center">
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
+        <div className="overflow-hidden w-full " ref={skillsSlideRef}>
+          <div className="flex flex-row gap-3 w-full items-center justify-start">
+            {mainSkills.map(({ title, logo, level }, index) => (
+              <span
+                style={{
+                  flex: '0 0 124px',
+                  marginRight: index === mainSkills.length - 1 ? '12px' : 0
+                }}
+              >
+                <Skill title={title} logo={logo} level={level} key={index + Math.random()} />
+              </span>
+            ))}
+          </div>
         </div>
+        {!fromHome && (
+          <p className="py-2">Apart from technical skills, I also posseses the following skills:</p>
+        )}
+        {!fromHome && (
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 items-center flex-wrap">
+            {softSkils.map((skill, index) => (
+              <p
+                className="w-full p-3 bg-grayCustom rounded-md flex items-center justify-start gap-2 whitespace-nowrap"
+                key={skill + (index + 1)}
+              >
+                <IconChecks stroke={1.25} className="text-blueCustom" />
+
+                {skill}
+              </p>
+            ))}
+          </div>
+        )}
       </section>
     </div>
   );
@@ -32,12 +62,24 @@ const OtherSkills = () => {
 
 export default OtherSkills;
 
-export const Skill = () => {
+export const Skill = ({
+  title,
+  logo,
+  level
+}: {
+  title: string;
+  logo: React.ReactNode;
+  level: number;
+}) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [isLogoHovered, setIsLogoHovered] = useState<boolean>(false);
   return (
     <motion.div
-      className="w-fit flex flex-col items-center gap-2 p-4 bg-grayCustom my-10 rounded-[32px] relative overflow-hidden"
+      className={cn(
+        'w-fit flex flex-col items-center gap-2 p-3 bg-grayCustom my-5 rounded-[20px] relative overflow-hidden '
+      )}
+      layout="position"
+      style={{ flex: '0 0 124px' }}
       whileHover={{
         backgroundColor: '#2454ff80',
         scale: 1.03,
@@ -50,6 +92,7 @@ export const Skill = () => {
     >
       <motion.span
         className=" bg-blueCustom h-full w-full aspect-square absolute top-0 left-0 -z-10"
+        layout="position"
         style={{
           clipPath: 'ellipse(50px 50px at 10% 20%)'
         }}
@@ -71,9 +114,9 @@ export const Skill = () => {
                 }
               }
         }
-      ></motion.span>
+      />
       <motion.span
-        className="w-full max-w-[100px] aspect-square h-[100px] text-blackCustom bg-white p-3 rounded-2xl relative z-10 overflow-hidden"
+        className="w-full max-w-[100px] aspect-square h-[100px] text-blackCustom bg-white p-3 rounded-[10px] relative z-10 overflow-hidden"
         animate={
           isHovered
             ? { backgroundColor: '#e5e4e2', color: '#2454ff' }
@@ -108,28 +151,112 @@ export const Skill = () => {
                 }
           }
         ></motion.span>
-        <IconBrandFigma stroke={0.6} className="w-full h-full" />
+        {/* <IconBrandFigma stroke={0.6} className="w-full h-full" /> */}
+        <span className="w-full h-full">{logo}</span>
       </motion.span>
       <motion.p
-        className="text-blueCustom text-lg capitalize"
-        animate={isHovered ? { color: '#fff' } : { color: '#2454ff' }}
+        className="text-blackCustom text-lg capitalize"
+        layout="position"
+        animate={
+          isHovered ? { color: '#fff', transition: { type: 'tween' } } : { color: '#212830' }
+        }
       >
-        Figma
+        {title}
       </motion.p>
       <div className="w-full flex flex-col items-center gap-1">
-        <motion.p className="italic" animate={isHovered ? { color: '#fff' } : { color: '#212830' }}>
+        {/* <motion.p className="italic" animate={isHovered ? { color: '#fff' } : { color: '#212830' }}>
           80%
-        </motion.p>
+        </motion.p> */}
         <motion.div
-          className="w-full h-2 border  rounded-full"
-          animate={isHovered ? { border: '1px solid #fff' } : { border: '1px solid #212830' }}
+          className="w-full h-2 m-1 border  rounded-[2px] "
+          animate={isHovered ? { border: '1px solid #fff' } : { border: '1px solid #e5e4e2' }}
         >
           <motion.span
-            className="w-[80%] bg-blackCustom h-full block "
-            animate={isHovered ? { backgroundColor: '#fff' } : { backgroundColor: '#212830' }}
+            className="w-[80%]  h-full block "
+            animate={
+              isHovered
+                ? {
+                    backgroundColor: '#fff',
+                    width: `${level}%`,
+                    transition: { delay: 0.4, duration: 0.8, type: 'tween', ease: easeInOut }
+                  }
+                : { backgroundColor: '#fff', width: 0 }
+            }
           ></motion.span>
         </motion.div>
       </div>
     </motion.div>
   );
 };
+
+const softSkils = [
+  'Communication Skills',
+  'Networking SKills',
+  'Communication Skills',
+  'Communication Skills',
+  'Communication Skills',
+  'Communication Skills'
+];
+
+const mainSkills = [
+  {
+    title: 'Figma',
+    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    level: 40
+  },
+  {
+    title: 'Figma',
+    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    level: 50
+  },
+  {
+    title: 'Figma',
+    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    level: 90
+  },
+  {
+    title: 'Figma',
+    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    level: 30
+  },
+  {
+    title: 'Figma',
+    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    level: 80
+  },
+  {
+    title: 'Figma',
+    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    level: 30
+  },
+  {
+    title: 'Figma',
+    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    level: 30
+  },
+  {
+    title: 'Figma',
+    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    level: 30
+  },
+  {
+    title: 'Figma',
+    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    level: 30
+  },
+  {
+    title: 'Figma',
+    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    level: 30
+  },
+  {
+    title: 'Figma',
+    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    level: 30
+  },
+  {
+    title: 'Figma',
+    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    level: 80
+  }
+];
