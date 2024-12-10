@@ -6,6 +6,7 @@ import {
   IconBrandWhatsapp,
   IconBrandX
 } from '@tabler/icons-react';
+import { LetterPullup } from './animated/LetterPullUp';
 
 const WorkWithMe = () => {
   return (
@@ -13,7 +14,8 @@ const WorkWithMe = () => {
       <main className="w-full max-w-screen-xl px-4 flex flex-col md:flex-row gap-10 md:gap-0 justify-between items-center">
         <section className="flex flex-col gap-3 items-start justify-center self-start">
           <p>Inerested in working with me?</p>
-          <p className="font-extrabold text-5xl ">Let's do it now.</p>
+          {/* <p className="font-extrabold text-5xl ">Let's do it now.</p> */}
+          <LetterPullup words="Let's do it now" className="font-extrabold text-5xl text-black" />
         </section>
         <section className="flex flex-col gap-3 items-end justify-center text-inherit self-end">
           <div className="flex gap-2 items-center justify-end text-inherit">

@@ -11,12 +11,15 @@ const WorkCard = () => {
       className="w-full p-5 rounded-[30px]  bg-grayCustom bg-opacity-50 flex items-center justify-center relative "
       initial={{
         opacity: 0.1,
-
+        scale: 1,
         translateX: 10
       }}
+      style={{ scale: 1 }}
       whileHover={{
-        translateY: [null, -1],
-        scale: [null, 1.005, 1.01],
+        // translateY: [null, -1],
+        // scale: [null, 1.005, 1.01],
+        scale: 1.01,
+        y: -1,
         transition: { duration: 0.2 }
       }}
       whileInView={{
@@ -40,19 +43,24 @@ const WorkCard = () => {
       />
       <motion.div
         className="w-10/12 absolute  bottom-10 right-1/2 translate-x-1/2 flex justify-between items-center bg-blueCustom p-4 rounded-[10px]"
-        style={{ right: '50%', translateX: '50%' }}
+        style={{ right: '50%', translateX: '50%', willChange: 'transform, scale' }}
         animate={
           isCardHovered
-            ? { scale: 1, y: 0, opacity: 1, transition: { duration: 0.6, type: 'spring' } }
-            : { scale: 1, y: 10, opacity: 0, transition: { duration: 0.6, type: 'spring' } }
+            ? {
+                scale: 1,
+                y: 0,
+                transition: { duration: 0.3, type: 'tween', delay: 0.3 }
+              }
+            : { scale: 1, y: 20, transition: { duration: 0.3, type: 'tween' } }
         }
+        layout
       >
-        <span className="w-full flex-1 text-white flex flex-col gap-0">
-          <p className=" w-full text-xl font-medium">Project Name</p>
-          <p className=" w-full  h-fit font-light ">
+        <motion.span className="w-full flex-1 text-white flex flex-col gap-0" >
+          <motion.p className=" w-full text-xl font-medium">Project Name</motion.p>
+          <motion.p className=" w-full  h-fit font-light ">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-        </span>
+          </motion.p>
+        </motion.span>
         <motion.span
           className="w-fit"
           animate={isCardHovered ? { scale: 1.1, rotate: '-20deg' } : { scale: 1 }}

@@ -32,7 +32,7 @@ const SubHeroSection = ({ title }: SubHeroSectionProps) => {
           <p className="text-white font-bold text-lg capitalize">{title}</p>
         </div>
         <div className="w-full absolute bottom-8 left-0 flex items-center justify-center  z-10">
-          <span className="w-full max-w-screen-xl flex justify-end px-4">
+          <span className="w-full max-w-screen-lg flex justify-end px-4">
             <IconMessageDots stroke={1} className="w-16 h-16 p-3 bg-blueCustom  rounded-full " />
           </span>
         </div>

@@ -25,43 +25,60 @@ const EyeCatcher = () => {
     };
   }, []);
   return (
-    <motion.div
-      className="text-blackCustom py-4 px-10 rounded-[20px]  bg-grayOp40 justify-center gap-10 hidden md:flex  my-8"
-      whileHover={{
-        scale: 1.01,
-        // rotate: '.5deg',
-        transition: {
-            duration: 0.5,
-            type: "spring"
-        }
-      }}
-    >
-      <motion.span
-        className="max-w-60 w-full flex gap-1 md:gap-4 "
-        whileHover={{
-          scale: 1.02,
-          rotate: '-2deg'
-        }}
-      >
-        <p className="font-bold text-3xl md:text-5xl  text-blueCustom flex ">
-          <motion.span>{roundedProjects}</motion.span>+
-        </p>
-        <p className="font-light ">Projects worked on so far</p>
-      </motion.span>
-      <span className="max-w-60 w-full flex gap-1 md:gap-4 ">
-        <p className="font-bold text-3xl md:text-5xl text-blueCustom flex ">
-          <motion.span>{roundedExperience}</motion.span>+
-        </p>
-        <p className="font-light ">Years of experience</p>
-      </span>
-      <span className="max-w-60 w-full flex gap-1 md:gap-4 ">
-        <p className="font-bold text-3xl md:text-5xl text-blueCustom flex ">
-          <motion.span>{roundedCustomers}</motion.span> +
-        </p>
+    // <motion.div
+    //   className="text-blackCustom py-4 px-10 rounded-[20px]  bg-grayOp40 justify-center gap-10 hidden md:flex  my-8"
+    //   whileHover={{
+    //     scale: 1.01,
+    //     // rotate: '.5deg',
+    //     transition: {
+    //         duration: 0.5,
+    //         type: "spring"
+    //     }
+    //   }}
+    // >
+    //   <motion.span
+    //     className="max-w-60 w-full flex gap-1 md:gap-4 "
+    //     whileHover={{
+    //       scale: 1.02,
+    //       rotate: '-2deg'
+    //     }}
+    //   >
+    //     <p className="font-bold text-3xl md:text-5xl  text-blueCustom flex ">
+    //       <motion.span>{roundedProjects}</motion.span>+
+    //     </p>
+    //     <p className="font-light ">Projects worked on so far</p>
+    //   </motion.span>
+    //   <span className="max-w-60 w-full flex gap-1 md:gap-4 ">
+    //     <p className="font-bold text-3xl md:text-5xl text-blueCustom flex ">
+    //       <motion.span>{roundedExperience}</motion.span>+
+    //     </p>
+    //     <p className="font-light ">Years of experience</p>
+    //   </span>
+    //   <span className="max-w-60 w-full flex gap-1 md:gap-4 ">
+    //     <p className="font-bold text-3xl md:text-5xl text-blueCustom flex ">
+    //       <motion.span>{roundedCustomers}</motion.span> +
+    //     </p>
 
-        <p className="font-light ">Happily Served customers</p>
-      </span>
-    </motion.div>
+    //     <p className="font-light ">Happily Served customers</p>
+    //   </span>
+    // </motion.div>
+    <main className="max-w-screen-lg px-3 bg-grayOp40 rounded-xl flex flex-col gap-0 py-4 w-full mt-10 md:mt-28 mb-10 md:mb-16">
+      <p className="text-base text-start">So far, more than</p>
+      <div className="w-full flex flex-col md:flex-row justify-center gap-4 items-center">
+        <span className="flex gap-2 justify-start items-center md:justify-center  md:max-w-[240px] w-full">
+          <p className="text-3xl font-semibold">20+</p>
+          <p className="text-lg leading-snug">Projects have been deployed</p>
+        </span>
+        <span className="flex gap-2 justify-start items-center md:justify-center md:max-w-[240px] w-full">
+          <p className="text-3xl font-semibold">20+</p>
+          <p className="text-lg leading-snug">Clients are well satisfied, happy and cheering</p>
+        </span>
+        <span className="flex gap-2 justify-start items-center md:justify-center md:max-w-[240px] w-full">
+          <p className="text-3xl font-semibold">5+</p>
+          <p className="text-lg leading-none">Years of experience spent doing this stuffs</p>
+        </span>
+      </div>
+    </main>
   );
 };
 
