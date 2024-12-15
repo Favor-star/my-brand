@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { IconExternalLink } from '@tabler/icons-react';
-
+import { motion } from 'framer-motion';
 import { cn } from '../utils';
 
 export const Card = React.memo(
@@ -24,7 +24,13 @@ export const Card = React.memo(
         hovered !== null && hovered !== index && 'blur-sm scale-[0.98]'
       )}
     >
-      <img src={card.src} alt={card.title} className="object-cover absolute inset-0" />
+      <motion.img
+        src={card.src}
+        alt={card.title}
+        className="object-cover absolute inset-0"
+        animate={hovered === index ? { scale: 1.1, transformOrigin: 'center' } : { scale: 1 }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+      />
       <div
         className={cn(
           'absolute inset-0 bg-blackCustom/50 flex items-end py-8 px-4 transition-opacity duration-300',

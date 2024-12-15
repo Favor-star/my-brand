@@ -1,5 +1,4 @@
 import { Drawer } from 'vaul';
-import WorkWithMe from './WorkWithMe';
 
 export default function VaulDrawer() {
   return (

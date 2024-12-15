@@ -8,20 +8,14 @@ const SingleService = ({ title, description }: ServiceListProps) => {
   const variants: Variants = {
     notHovered: {
       backgroundColor: '#E5E4E266',
-      color: '#212830',
-      transition: {
-        duration: 0.5,
-        type: 'tween'
-      }
+      opacity: 0,
+      y: 30,
+      color: '#212830'
     },
     hovered: {
       backgroundColor: '#2454ff',
       color: '#fff',
-      scale: 1.03,
-      transition: {
-        duration: 0.5,
-        type: 'tween'
-      }
+      scale: 1.03
     }
   };
   return (
@@ -29,9 +23,15 @@ const SingleService = ({ title, description }: ServiceListProps) => {
       className="w-full flex flex-col gap-2 justify-center items-start rounded-2xl border-blueCustom border p-4 bg-grayOp40 "
       variants={variants}
       initial="notHovered"
+      layout="preserve-aspect"
       whileHover={'hovered'}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.5,
+        type: 'tween'
+      }}
     >
       <IconCode stroke={1} className="w-10 h-10  " />
       <motion.span

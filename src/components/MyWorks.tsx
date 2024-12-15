@@ -1,5 +1,4 @@
-import { IconBriefcase, IconRefresh } from '@tabler/icons-react';
-import WorkCard from './WorkCard';
+import {  IconRefresh } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 import { FocusCards } from './FocusCard';
 import { useEffect } from 'react';

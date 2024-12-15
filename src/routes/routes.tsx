@@ -3,6 +3,7 @@ import Homepage from '../pages/Homepage';
 import Services from '../pages/Services';
 import Portfolio from '../pages/Portfolio';
 import AboutMe from '../pages/AboutMe';
+import Loader from '../components/animated/Loader';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
     path: '/services',
     element: <Services />
   },
+  { path: '/loader', element: <Loader /> },
   { path: '/portfolio', element: <Portfolio /> },
   { path: '/about', element: <AboutMe /> }
 ]);

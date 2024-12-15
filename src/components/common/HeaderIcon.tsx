@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion, Variants } from 'framer-motion';
-import { IconHome } from '@tabler/icons-react';
 import { cn } from '../../utils';
 
 interface HeaderIconProps {

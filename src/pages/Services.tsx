@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import ReviewSection from '../components/ReviewSection';
 import SingleService from '../components/servicePage/SingleService';
 import SubHeroSection from '../components/SubHeroSection';
+import { motion } from 'framer-motion';
 // import { ReactLenis } from 'lenis/react';
 // import Lenis from 'lenis';
 // import SmoothScroll from '../components/common/SmoothScroll';
@@ -11,7 +12,7 @@ import SubHeroSection from '../components/SubHeroSection';
 const Services = () => {
   return (
     // <SmoothScroll>
-    <main className="w-full flex flex-col justify-center items-center relative">
+    <motion.main className="w-full flex flex-col justify-center items-center relative">
       <SubHeroSection title="services" />
       <p className="w-full max-w-screen-lg  text-start px-3">
         Explore a wide array of services designed to bring your tech visions to life. From custom
@@ -31,7 +32,7 @@ const Services = () => {
       <ContactMeSection />
       <FAQsSection />
       <Footer />
-    </main>
+    </motion.main>
     // </SmoothScroll>
   );
 };
