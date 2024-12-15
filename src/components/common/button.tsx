@@ -12,15 +12,15 @@ export interface ButtonProps
 }
 
 const buttonVariants = cva(
-  'inline-flex items-center gap-2 rounded-xl px-4 py-2 font-light text-nowrap',
+  'inline-flex items-center gap-2 rounded-xl px-4 py-2 font-light text-nowrap ',
   {
     variants: {
       variant: {
-        default: 'bg-blueCustom text-white',
+        default: 'bg-blueCustom text-white border-2 border-inherit',
         outline: 'bg-inherit text-blueCustom border border-blueCustom'
       },
       size: {
-        default: 'text-sm font-light'
+        default: 'text-base font-normal '
       }
     },
     defaultVariants: {
@@ -52,7 +52,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           scale: 1.1
         }}
         whileTap={{ scale: 0.9 }}
-        transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+        transition={{ type: 'spring', stiffness: 400, damping: 50,  }}
         className="w-fit"
         onMouseEnter={() => handleHoverChange(true)}
         onMouseLeave={() => handleHoverChange(false)}

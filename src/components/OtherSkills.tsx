@@ -1,6 +1,6 @@
 import { IconBrandFigma, IconChecks } from '@tabler/icons-react';
 import { easeInOut, motion } from 'framer-motion';
-import { useState, useCallback } from 'react';
+import { useState} from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoscroll from 'embla-carousel-auto-scroll';
 import Arrows from './common/Arrows';
@@ -15,7 +15,7 @@ const OtherSkills = ({ fromHome = false }: { fromHome?: boolean }) => {
     usePrevNextButtons(skillsSlideAPI);
 
   return (
-    <div className="w-full flex flex-col items-center justify-center px-3 ">
+    <div className="w-full flex flex-col items-center justify-center px-3">
       <section className="w-full max-w-screen-lg  ">
         <div className="w-full flex justify-between items-center my-5">
           <p className="font-medium text-2xl">Skills</p>

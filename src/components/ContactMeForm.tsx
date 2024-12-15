@@ -12,13 +12,14 @@ import Input from './common/Input';
 import { Button } from './common/button';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+
 const ContactMeForm = () => {
   const [isButtonHovered, setIsbuttonHovered] = useState(false);
   return (
     <div className="w-full flex flex-col gap-2">
       <main className="w-full rounded-2xl flex flex-col gap-4 text-blackCustom p-5 bg-white">
         <p className="text-4xl font-extrabold w-full">Let's work together</p>
-        <p className="text-lg">
+        <p className="text-sm">
           Ready to start? Reach out and let's make something amazing together.
         </p>
         <section className="w-full flex flex-col gap-3">
@@ -31,11 +32,12 @@ const ContactMeForm = () => {
             <Input placeholder="Phone Number" type="tel" />
           </div>
           <div className="w-full">
-            <input
+            {/* <input
               type=""
               placeholder="Choose a service"
               className="border border-blackCustom p-3 focus-within:outline-none placeholder:text-blackCustom placeholder:text-opacity-60 border-opacity-50 rounded-lg  w-full"
-            />
+            /> */}
+         
           </div>
           <div className="w-full">
             <input
@@ -83,7 +85,7 @@ const ContactMeForm = () => {
           >
             <IconBrandWhatsapp
               stroke={1}
-              className=" w-10 h-10 md:w-12 md:h-12 p-1 rounded-md sm:rounded-lg  text-white  border-blackCustom bg-blackCustom  border-[1px]"
+              className=" w-10 h-10 md:w-12 md:h-12 p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
             />
           </motion.span>
           <motion.span
@@ -97,7 +99,7 @@ const ContactMeForm = () => {
           >
             <IconBrandX
               stroke={1}
-              className=" w-10 h-10 md:w-12 md:h-12  p-1 rounded-md sm:rounded-lg  text-white  border-blackCustom bg-blackCustom  border-[1px]"
+              className=" w-10 h-10 md:w-12 md:h-12  p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
             />
           </motion.span>
           <motion.span
@@ -111,7 +113,7 @@ const ContactMeForm = () => {
           >
             <IconBrandDribbble
               stroke={1}
-              className=" w-10 h-10 md:w-12 md:h-12  p-1 rounded-md sm:rounded-lg  text-white  border-blackCustom bg-blackCustom  border-[1px]"
+              className=" w-10 h-10 md:w-12 md:h-12  p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
             />
           </motion.span>
           <motion.span
@@ -125,7 +127,7 @@ const ContactMeForm = () => {
           >
             <IconBrandGithub
               stroke={1}
-              className=" w-10 h-10 md:w-12 md:h-12  p-1 rounded-md sm:rounded-lg  text-white  border-blackCustom bg-blackCustom  border-[1px]"
+              className=" w-10 h-10 md:w-12 md:h-12  p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
             />
           </motion.span>
           <motion.span
@@ -139,7 +141,7 @@ const ContactMeForm = () => {
           >
             <IconBrandUpwork
               stroke={1}
-              className=" w-10 h-10 md:w-12 md:h-12  p-1 rounded-md sm:rounded-lg  text-white  border-blackCustom bg-blackCustom  border-[1px]"
+              className=" w-10 h-10 md:w-12 md:h-12  p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
             />
           </motion.span>
           <motion.span
@@ -153,7 +155,7 @@ const ContactMeForm = () => {
           >
             <IconBrandLinkedin
               stroke={1}
-              className=" w-10 h-10 md:w-12 md:h-12 p-1 rounded-md sm:rounded-lg  text-white  border-blackCustom bg-blackCustom  border-[1px]"
+              className=" w-10 h-10 md:w-12 md:h-12 p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
             />
           </motion.span>
         </div>

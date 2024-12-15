@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
+import { useMotionValue,  animate } from 'framer-motion';
 import { useEffect } from 'react';
 const EyeCatcher = () => {
   const SERVED_CUSTOMERS = 50;
@@ -9,9 +9,9 @@ const EyeCatcher = () => {
   const countExperience = useMotionValue(0);
   const countProjects = useMotionValue(0);
 
-  const roundedCustomers = useTransform(countCustomers, Math.round);
-  const roundedExperience = useTransform(countExperience, Math.round);
-  const roundedProjects = useTransform(countProjects, Math.round);
+  // const roundedCustomers = useTransform(countCustomers, Math.round);
+  // const roundedExperience = useTransform(countExperience, Math.round);
+  // const roundedProjects = useTransform(countProjects, Math.round);
 
   useEffect(() => {
     const animationCustomers = animate(countCustomers, SERVED_CUSTOMERS, { duration: 2 });
@@ -62,20 +62,26 @@ const EyeCatcher = () => {
     //     <p className="font-light ">Happily Served customers</p>
     //   </span>
     // </motion.div>
-    <main className="max-w-screen-lg px-3 bg-grayOp40 rounded-xl flex flex-col gap-0 py-4 w-full mt-10 md:mt-28 mb-10 md:mb-16">
+    <main className="max-w-screen-lg px-3 w-full flex flex-col gap-2 my-5 text-blackCustom">
       <p className="text-base text-start">So far, more than</p>
-      <div className="w-full flex flex-col md:flex-row justify-center gap-4 items-center">
-        <span className="flex gap-2 justify-start items-center md:justify-center  md:max-w-[240px] w-full">
-          <p className="text-3xl font-semibold">20+</p>
-          <p className="text-lg leading-snug">Projects have been deployed</p>
+      <div className="w-full  justify-center gap-5 items-center grid grid-cols-2  md:grid-cols-4">
+        <span className="flex flex-col sm:flex-row gap-2 justify-start items-center md:justify-center  md:max-w-[240px] w-full">
+          <p className="text-5xl font-semibold">20+</p>
+          <p className="text-base  leading-snug">Different projects have been deployed so far</p>
         </span>
-        <span className="flex gap-2 justify-start items-center md:justify-center md:max-w-[240px] w-full">
-          <p className="text-3xl font-semibold">20+</p>
-          <p className="text-lg leading-snug">Clients are well satisfied, happy and cheering</p>
+        <span className="flex flex-col sm:flex-row gap-2 justify-start items-center md:justify-center md:max-w-[240px] w-full">
+          <p className="text-5xl font-semibold">20+</p>
+          <p className="text-base leading-snug">Clients are well satisfied, happy and cheering</p>
         </span>
-        <span className="flex gap-2 justify-start items-center md:justify-center md:max-w-[240px] w-full">
-          <p className="text-3xl font-semibold">5+</p>
-          <p className="text-lg leading-none">Years of experience spent doing this stuffs</p>
+        <span className="flex flex-col sm:flex-row gap-2 justify-start items-center md:justify-center md:max-w-[240px] w-full">
+          <p className="text-5xl font-semibold">20+</p>
+          <p className="text-base leading-snug">
+            Different designs, prototyps & websites were made{' '}
+          </p>
+        </span>
+        <span className="flex flex-col sm:flex-row gap-2 justify-start items-center md:justify-center md:max-w-[240px] w-full">
+          <p className="text-5xl font-semibold">5+</p>
+          <p className="text-base leading-none">Years of experience spent doing this stuffs</p>
         </span>
       </div>
     </main>

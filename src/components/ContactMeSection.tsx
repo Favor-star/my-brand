@@ -14,11 +14,11 @@ const ContactMeSection = () => {
   };
   return (
     <div className="w-full flex items-center justify-center py-5  bg-grayCustom text-blackCustom">
-      <main className="w-full flex flex-col-reverse justify-start items-center md:flex-row  max-w-screen-lg px-3">
+      <main className="w-full flex flex-col-reverse justify-start items-center md:flex-row  max-w-screen-lg px-3 gap-5 md:gap-10">
         <ContactMeForm />
-        <section className="w-full grid grid-rows-3 gap-2 justify-start items-start mb-5 md:mb-0">
+        <section className="w-full grid grid-rows-3 gap-2 justify-start items-start ">
           <div className="flex gap-5 items-center">
-            <motion.span variants={iconsVariants} initial="notHovered" whileHover={'hovered'} >
+            <motion.span variants={iconsVariants} initial="notHovered" whileHover={'hovered'}>
               <Link to="mailto:favoureliab@gmail.com">
                 <IconPhone
                   stroke={1}

@@ -1,4 +1,4 @@
-import { IconArrowNarrowRight, IconCreditCard, IconRefresh } from '@tabler/icons-react';
+import { IconArrowNarrowRight,  IconRefresh } from '@tabler/icons-react';
 import { motion, useMotionValue } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { cn } from '../utils';
@@ -32,10 +32,10 @@ const MyServices = ({ fromHome = false }: { fromHome?: boolean }) => {
   }, [hoveredIndex, maxHeight, y]);
 
   return (
-    <section className="w-full bg-grayCustom text-blackCustom flex flex-col items-center justify-center px-4 py-16">
-      <div className="flex flex-row gap-2 mb-5">
-        <IconCreditCard stroke={1} className="w-10 h-10" />
-        <p className="font-bold text-3xl">My offered Services</p>
+    <section className="w-full bg-grayCustom text-blackCustom flex flex-col items-center justify-center px-4 py-5">
+      <div className="flex flex-row gap-2 mb-5 w-full max-w-screen-lg">
+        {/* <IconCreditCard stroke={1} className="w-10 h-10" /> */}
+        <p className="font-bold text-2xl self-start">Services</p>
       </div>
       <main className="w-full max-w-screen-lg flex flex-col gap-0 relative">
         {[...(fromHome ? services.slice(0, 3) : services)].map((service, index) => (
@@ -55,7 +55,7 @@ const MyServices = ({ fromHome = false }: { fromHome?: boolean }) => {
                   hoveredIndex === index ? 'text-white' : 'text-blackCustom'
                 )}
               >
-                0{index + 1}.
+                0{index + 1}
               </p>
               <span className="flex gap-3 flex-col sm:flex-row">
                 <p
