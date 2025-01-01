@@ -1,8 +1,9 @@
-import { IconArrowNarrowRight,  IconRefresh } from '@tabler/icons-react';
+import { IconArrowNarrowRight, IconRefresh } from '@tabler/icons-react';
 import { motion, useMotionValue } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { cn } from '../utils';
 import { Button } from './common/button';
+import { useNavigate } from 'react-router-dom';
 
 const MyServices = ({ fromHome = false }: { fromHome?: boolean }) => {
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -10,7 +11,10 @@ const MyServices = ({ fromHome = false }: { fromHome?: boolean }) => {
   const [maxHeight, setMaxHeight] = useState<number>(0);
   const [isButtonHovered, setIsButtonHovered] = useState<boolean>(false);
   const y = useMotionValue(0);
-
+  const navigate = useNavigate();
+  const handleServiceBtn = () => {
+    navigate('/services');
+  };
   useEffect(() => {
     const calculateMaxHeight = () => {
       const heights = itemRefs.current
@@ -103,7 +107,12 @@ const MyServices = ({ fromHome = false }: { fromHome?: boolean }) => {
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
         ></motion.span>
       </main>
-      <Button variant={'outline'} className="mt-10" onHoverChange={setIsButtonHovered}>
+      <Button
+        variant={'outline'}
+        className="mt-10"
+        onHoverChange={setIsButtonHovered}
+        onClick={handleServiceBtn}
+      >
         View More
         <motion.span
           animate={isButtonHovered ? { rotate: '180deg' } : { rotate: '0deg' }}

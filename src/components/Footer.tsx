@@ -20,7 +20,7 @@ const Footer = () => {
         >
           F
         </Link> */}
-        <div className="font-light flex flex-row md:flex-row gap-2 items-center self-start">
+        <div className="font-light flex flex-row md:flex-row gap-2 items-center ">
           <p className=" text-left text-base md:text-lg">Are you impressed?</p>
           <Button className="bg-white text-blueCustom flex flex-row items-center gap-2">
             Buy Me A Coffee
@@ -43,7 +43,7 @@ const Footer = () => {
           <VaulDrawer />
         </div> */}
         <div className="flex flex-col gap-1 items-start md:items-end w-full mt-2 md:mt-0">
-          <div className="">Follow me for more</div>
+          <div className="justify-start md:justify-center w-full flex ">Follow me for more</div>
           <div className="flex gap-4 items-center justify-start md:justify-center   w-full ">
             <IconMail stroke={1} className="footer_links" />
             <IconBrandInstagram stroke={1} className="footer_links" />

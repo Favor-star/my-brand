@@ -20,6 +20,7 @@ import DotPattern from '../components/backgrounds/DotPattern';
 import { cn } from '../utils';
 import HI from '../assets/HI (1).svg';
 import { motion } from 'framer-motion';
+
 const Homepage = () => {
   return (
     <main className="h-full  relative">
@@ -43,7 +44,7 @@ const Homepage = () => {
         <motion.img
           src={HI}
           alt="HI image"
-          className="absolute -bottom-28 md:top-40 rotate-12 right-1/2 translate-x-1/2 -translate-y-1/2 z-30 h-fit w-[600px] bg-opacity-5 opacity-100 md:opacity-10 animate-pulse  "
+          className="absolute -bottom-28 md:top-40 rotate-12 right-1/2 translate-x-1/2 -translate-y-1/2 -z-30 h-fit w-[600px] bg-opacity-5 opacity-100 md:opacity-10 animate-pulse  "
         />
         {/* <RetroGrid /> */}
       </div>
@@ -59,8 +60,9 @@ const Homepage = () => {
       <MyServices fromHome={true} />
       <MyWorks />
       <EducExp />
-      <OtherSkills />
+      <OtherSkills fromHome={true} />
       <ReviewSection />
+      <div id="contactMeSection" />
       <ContactMeSection />
       <Footer />
     </main>

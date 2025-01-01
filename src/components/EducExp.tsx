@@ -290,7 +290,7 @@ const EducExp = () => {
               </div>
             ))}
           </div> */}
-          <EducationCarousel />
+          <EducationCarousel isExp={true} />
         </section>
       </main>
     </section>
@@ -298,54 +298,3 @@ const EducExp = () => {
 };
 
 export default EducExp;
-
-// const eduExp = [
-//   {
-//     period: '2012-present',
-//     place: 'RP/IPRC KIGALI',
-//     deggre: 'Advanced diploma in Mechatronics',
-//     location: 'Kigali, Rwanda'
-//   },
-//   {
-//     period: '2012-present',
-//     place: 'RP/IPRC KIGALI',
-//     deggre: 'Advanced diploma in Mechatronics',
-//     location: 'Kigali, Rwanda'
-//   },
-//   {
-//     period: '2012-present',
-//     place: 'RP/IPRC KIGALI',
-//     deggre: 'Advanced diploma in Mechatronics',
-//     location: 'Kigali, Rwanda'
-//   },
-//   {
-//     period: '2012-present',
-//     place: 'RP/IPRC KIGALI',
-//     deggre: 'Advanced diploma in Mechatronics',
-//     location: 'Kigali, Rwanda'
-//   },
-//   {
-//     period: '2012-present',
-//     place: 'RP/IPRC KIGALI',
-//     deggre: 'Advanced diploma in Mechatronics',
-//     location: 'Kigali, Rwanda'
-//   },
-//   {
-//     period: '2012-present',
-//     place: 'RP/IPRC KIGALI',
-//     deggre: 'Advanced diploma in Mechatronics',
-//     location: 'Kigali, Rwanda'
-//   },
-//   {
-//     period: '2012-present',
-//     place: 'RP/IPRC KIGALI',
-//     deggre: 'Advanced diploma in Mechatronics',
-//     location: 'Kigali, Rwanda'
-//   },
-//   {
-//     period: '2012-present',
-//     place: 'RP/IPRC KIGALI',
-//     deggre: 'Advanced diploma in Mechatronics',
-//     location: 'Kigali, Rwanda'
-//   }
-// ];

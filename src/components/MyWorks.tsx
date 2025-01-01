@@ -1,12 +1,17 @@
-import {  IconRefresh } from '@tabler/icons-react';
+import { IconRefresh } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 import { FocusCards } from './FocusCard';
 import { useEffect } from 'react';
 import Image from '../assets/Design 1.png';
-import { useLocation } from 'react-router-dom';
+import WCT from '../assets/WCT.png';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from './common/button';
 const MyWorks = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const handleViewMore = () => {
+    navigate('/portfolio');
+  };
   useEffect(() => {
     console.log(location.pathname === '/');
 
@@ -15,7 +20,7 @@ const MyWorks = () => {
 
   return (
     <section className="w-full bg-inherit text-blackCustom flex flex-col items-center justify-center px-4 md:py-10 py-5 relative overflow-hidden ">
-      <motion.div className="w-[500px] aspect-square bg-blueCustom rounded-full blur-3xl absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  bg-opacity-15"></motion.div>
+      <motion.div className="w-[500px] aspect-square bg-blueCustom rounded-full blur-3xl absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  bg-opacity-15 -z-20" />
 
       <div className="flex flex-row gap-2 mb-5   w-full max-w-screen-lg ">
         {/* <IconBriefcase stroke={1} className="w-10 h-10 " /> */}
@@ -23,7 +28,7 @@ const MyWorks = () => {
       </div>
       <FocusCards cards={cards} fromHome={location.pathname === '/'} />
       {location.pathname === '/' && (
-        <Button variant={'outline'} className='mt-2 text-sm '>
+        <Button variant={'outline'} className="mt-5 text-sm " onClick={handleViewMore}>
           View More
           <IconRefresh stroke={1} />
         </Button>
@@ -68,9 +73,10 @@ export default MyWorks;
 // ];
 
 const cards = [
-  { title: 'wildlifeconservationtravel.com', src: Image },
-  { title: 'wildlifeconservationtravel.com', src: Image },
-  { title: 'wildlifeconservationtravel.com', src: Image },
-  { title: 'wildlifeconservationtravel.com', src: Image },
-  { title: 'wildlifeconservationtravel.com', src: Image }
+  { title: 'wildlifeconservationtravel.com', src: WCT },
+  { title: 'Iga App', src: Image },
+  { title: 'Iga App', src: Image },
+  { title: 'iga.com', src: Image },
+  { title: 'iga.com', src: Image },
+  { title: 'iga.com', src: Image }
 ];

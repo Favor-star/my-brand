@@ -1,6 +1,21 @@
-import { IconBrandFigma, IconChecks } from '@tabler/icons-react';
+import {
+  IconBrandBootstrap,
+  IconBrandCpp,
+  IconBrandCSharp,
+  IconBrandCss3,
+  IconBrandFigma,
+  IconBrandFramer,
+  IconBrandJavascript,
+  IconBrandNextjs,
+  IconBrandReact,
+  IconBrandTailwind,
+  IconBrandTypescript,
+  IconBrandUnity,
+  IconBrandWordpress,
+  IconChecks
+} from '@tabler/icons-react';
 import { easeInOut, motion } from 'framer-motion';
-import { useState} from 'react';
+import { useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoscroll from 'embla-carousel-auto-scroll';
 import Arrows from './common/Arrows';
@@ -190,73 +205,87 @@ export const Skill = ({
 };
 
 const softSkils = [
+  'Problem Solving Skills',
+  'Networking Skills',
+  'Analytical Skills',
   'Communication Skills',
-  'Networking SKills',
-  'Communication Skills',
-  'Communication Skills',
-  'Communication Skills',
-  'Communication Skills'
+  'Teamwork',
+  'Adaptability',
+  'Time Management',
+  'Critical Thinking',
+  'Creativity',
+  'Leadership',
+  'Emotional Intelligence',
+  'Conflict Resolution',
+  'Decision Making',
+  'Interpersonal Skills',
+  'Work Ethic'
 ];
 
 const mainSkills = [
+  {
+    title: 'JS',
+    logo: <IconBrandJavascript stroke={0.6} className="w-full h-full" />,
+    level: 40
+  },
   {
     title: 'Figma',
     logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
     level: 40
   },
   {
-    title: 'Figma',
-    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    title: 'CSS3',
+    logo: <IconBrandCss3 stroke={0.6} className="w-full h-full" />,
     level: 50
   },
   {
-    title: 'Figma',
-    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    title: 'Tailwind',
+    logo: <IconBrandTailwind stroke={0.6} className="w-full h-full" />,
     level: 90
   },
   {
-    title: 'Figma',
-    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    title: 'NextJs',
+    logo: <IconBrandNextjs stroke={0.6} className="w-full h-full" />,
     level: 30
   },
   {
-    title: 'Figma',
-    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    title: 'React',
+    logo: <IconBrandReact stroke={0.6} className="w-full h-full" />,
     level: 80
   },
   {
-    title: 'Figma',
-    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    title: 'TypeScript',
+    logo: <IconBrandTypescript stroke={0.6} className="w-full h-full" />,
     level: 30
   },
   {
-    title: 'Figma',
-    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    title: 'WordPress',
+    logo: <IconBrandWordpress stroke={0.6} className="w-full h-full" />,
     level: 30
   },
   {
-    title: 'Figma',
-    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    title: 'Framer',
+    logo: <IconBrandFramer stroke={0.6} className="w-full h-full" />,
     level: 30
   },
   {
-    title: 'Figma',
-    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    title: 'VR / AR',
+    logo: <IconBrandUnity stroke={0.6} className="w-full h-full" />,
     level: 30
   },
   {
-    title: 'Figma',
-    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    title: 'C#',
+    logo: <IconBrandCSharp stroke={0.6} className="w-full h-full" />,
     level: 30
   },
   {
-    title: 'Figma',
-    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    title: 'C++',
+    logo: <IconBrandCpp stroke={0.6} className="w-full h-full" />,
     level: 30
   },
   {
-    title: 'Figma',
-    logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
+    title: 'Bootstrap',
+    logo: <IconBrandBootstrap stroke={0.6} className="w-full h-full" />,
     level: 80
   }
 ];

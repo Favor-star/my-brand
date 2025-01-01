@@ -35,7 +35,7 @@ export function LetterPullup({ className, words, delay }: LetterPullupProps) {
           animate="animate"
           custom={i}
           className={cn(
-            'font-display text-center text-5xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-4xl md:leading-[5rem]',
+            'font-display text-center text-5xl font-bold tracking-[-0.02em] text-black drop-shadow-sm  md:text-4xl md:leading-[5rem]',
             className
           )}
         >

@@ -3,7 +3,11 @@ import { useState } from 'react';
 import { IconMinus, IconPlus } from '@tabler/icons-react';
 import { cn } from '../utils';
 
-const FAQ = () => {
+interface FAQProps {
+  question: string;
+  answer: string;
+}
+const FAQ = ({ question, answer }: FAQProps) => {
   const [isClicked, setIsClicked] = useState(false);
   const containerVariants: Variants = {
     folded: {
@@ -40,9 +44,7 @@ const FAQ = () => {
         className="w-full flex justify-between items-center cursor-pointer select-none"
         onClick={() => setIsClicked(!isClicked)}
       >
-        <p className="font-medium">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, earum. lorem, ipsum dolor?
-        </p>
+        <p className="font-medium">{question}</p>
         <IconPlus className={cn('transition-all', isClicked ? ' hidden' : 'shown')} />
         <IconMinus className={cn('transition-all', !isClicked ? ' hidden' : 'shown')} />
       </span>
@@ -70,10 +72,7 @@ const FAQ = () => {
           animate={isClicked ? 'unfolded' : 'folded'}
           className="italic font-light  text-balance"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quisquam eius corporis ipsa
-          dolorem eaque illum, nisi ut repellat sed, excepturi atque voluptate consequuntur!
-          Cupiditate tenetur architecto perspiciatis accusantium. Reprehenderit fugit facilis
-          officia sint assumenda error voluptatibus molestiae mollitia aut.
+          {answer}
         </motion.p>
       </motion.span>
     </motion.div>

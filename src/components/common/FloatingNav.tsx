@@ -18,7 +18,12 @@ export const FloatingNav = ({
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(false);
-
+  const handleHireMe = () => {
+    const contactSection = document.getElementById('contactMeSection');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   useMotionValueEvent(scrollYProgress, 'change', (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === 'number') {
@@ -65,7 +70,10 @@ export const FloatingNav = ({
             <span className="hidden sm:block text-sm text-white">{navItem.name}</span>
           </Link>
         ))}
-        <button className="border text-sm font-medium relative text-blueCustom border-blueCustom  px-4 py-2 rounded-xl">
+        <button
+          className="border text-sm font-medium relative text-blueCustom border-blueCustom  px-4 py-2 rounded-xl"
+          onClick={handleHireMe}
+        >
           <span>Hire Me!</span>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
         </button>
