@@ -3,8 +3,12 @@ import Footer from '../components/Footer';
 import MyWorks from '../components/MyWorks';
 import SubHeroSection from '../components/SubHeroSection';
 import WorkWithMe from '../components/WorkWithMe';
+import { useEffect } from 'react';
 
 const Portfolio = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="w-full flex flex-col justify-center items-center relative text-blackCustom">
       <SubHeroSection title="portfolio" />
@@ -12,7 +16,7 @@ const Portfolio = () => {
         Be the first to take a look at amazing works that I have recently completed. I am always
         ready to take on new challenges and deliver the best results, like I have always done. Even
         though they are not quite a lot, but I hope they are enough to demonstrate my level of
-      expertise.
+        expertise.
       </p>
       <section className="w-full  flex items-center justify-center py-10 bg-grayCustom text-inherit my-10">
         <div className="max-w-screen-lg w-full flex flex-col md:flex-row justify-center  gap-10 md:gap-0 md:justify-around items-start md:items-center px-4">

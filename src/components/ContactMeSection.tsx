@@ -19,7 +19,7 @@ const ContactMeSection = () => {
         <section className="w-full grid grid-rows-3 gap-2 justify-start items-start ">
           <div className="flex gap-5 items-center">
             <motion.span variants={iconsVariants} initial="notHovered" whileHover={'hovered'}>
-              <Link to="mailto:favoureliab@gmail.com">
+              <Link to="tel:+250787922900">
                 <IconPhone
                   stroke={1}
                   className=" w-16 h-16 p-3 rounded-2xl bg-blueCustom text-white"

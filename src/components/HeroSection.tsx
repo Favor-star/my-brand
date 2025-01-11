@@ -18,6 +18,7 @@ import Favor from '../assets/Favor.png';
 import { motion } from 'framer-motion';
 import { Button } from './common/button';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 // import DotPattern from './backgrounds/DotPattern';
 // import SlideButton from './common/Another';
 // import SecondButton from './common/Another';
@@ -45,10 +46,9 @@ const HeroSection = () => {
             a Rwanda-based self-made web-developer & UI-UX designer.
             <br />
             Holds a degree in Mechatronics technology, therefore, I am capable of efficiently using
-            SOLDIWORKS too.
+            SOLIdWORKS for product designing too.
           </span>
           <span className="flex gap-10 max-w-[400px]">
-           
             <Button
               variant={'default'}
               className="border border-blueCustom text-lg"
@@ -65,10 +65,18 @@ const HeroSection = () => {
           <span className="flex gap-2 items-center justify-start">
             <IconCornerDownRight stroke={1.25} />
             <p className="text-sm">or reach me through:</p>
-            <IconBrandWhatsapp stroke={1.25} />
-            <IconBrandX stroke={1.25} />
-            <IconBrandInstagram stroke={1.25} />
-            <IconBrandLinkedin stroke={1.25} />
+            <Link to="https://wa.me/0787922900" target="_blank">
+              <IconBrandWhatsapp stroke={1.25} />
+            </Link>
+            <Link to="https://www.x.com/favour_eliab" target="_blank">
+              <IconBrandX stroke={1.25} />
+            </Link>
+            <Link to="https://www.instagram.com/favourelly1" target="_blank">
+              <IconBrandInstagram stroke={1.25} />
+            </Link>
+            <Link to="https://www.linkedin.com/in/favour-elly/" target="_blank">
+              <IconBrandLinkedin stroke={1.25} />
+            </Link>
             <span className="p1 rounded-md border border-grayOp40 bg-white text-grayCustom hover:text-blackCustom transition-all hover:border-blackCustom">
               <IconChevronsRight stroke={1.25} />
             </span>

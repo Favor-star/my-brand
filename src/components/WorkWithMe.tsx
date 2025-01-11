@@ -6,6 +6,7 @@ import {
   IconBrandWhatsapp,
   IconBrandX
 } from '@tabler/icons-react';
+import { Link } from 'react-router-dom';
 
 const WorkWithMe = () => {
   return (
@@ -17,18 +18,32 @@ const WorkWithMe = () => {
         </section>
         <section className="flex flex-col gap-3 items-end justify-center text-inherit self-end">
           <div className="flex gap-2 items-center justify-end text-inherit">
-            <p className="font-extrabold text-lg">favoureliab@gmail.com</p>
-            <IconArrowNarrowRight
-              stroke={1.5}
-              className="w-10 h-10 p-1 rounded-full border text-inherit border-blackCustom -rotate-45 transition-all hover:rotate-0"
-            />
+            <Link to="mailto:favoureliab@gmail.com">
+              <p className="font-extrabold text-lg cursor-pointer">favoureliab@gmail.com</p>
+            </Link>
+            <Link to="mailto:favoureliab@gmail.com">
+              <IconArrowNarrowRight
+                stroke={1.5}
+                className="w-10 h-10 p-1 rounded-full border text-inherit border-blackCustom -rotate-45 transition-all hover:rotate-0"
+              />
+            </Link>
           </div>
           <div className="flex gap-2">
-            <IconBrandInstagram stroke={1.5} className="work__with__me__icons" />
-            <IconBrandUpwork stroke={1.5} className="work__with__me__icons" />
-            <IconBrandX stroke={1.5} className="work__with__me__icons" />
-            <IconBrandGithub stroke={1.5} className="work__with__me__icons" />
-            <IconBrandWhatsapp stroke={1.5} className="work__with__me__icons" />
+            <Link to="https://www.wa.me/0787922900" target="_blank">
+              <IconBrandInstagram stroke={1.5} className="work__with__me__icons" />
+            </Link>
+            <Link to="https://www.upwork.com/freelancers/~0164586914ad0010ed">
+              <IconBrandUpwork stroke={1.5} className="work__with__me__icons" />
+            </Link>
+            <Link to="https://www.x.com/favour_eliab" target="_blank">
+              <IconBrandX stroke={1.5} className="work__with__me__icons" />
+            </Link>
+            <Link to="https://www.github.com/favor-star" target="_blank">
+              <IconBrandGithub stroke={1.5} className="work__with__me__icons" />
+            </Link>
+            <Link to="https://wa.me/0787922900" target="_blank">
+              <IconBrandWhatsapp stroke={1.5} className="work__with__me__icons" />
+            </Link>
           </div>
         </section>
       </main>

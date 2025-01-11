@@ -20,14 +20,14 @@ const Footer = () => {
         >
           F
         </Link> */}
-        <div className="font-light flex flex-row md:flex-row gap-2 items-center ">
+        <div className="font-light flex flex-row md:flex-row gap-2 items-start md:items-center  mb-3">
           <p className=" text-left text-base md:text-lg">Are you impressed?</p>
-          <Link to="https://www.buymeacoffee.com/favoureliab" target="_blank">
-        
-          <Button className="bg-white text-blueCustom flex flex-row items-center gap-2">
-            Buy Me A Coffee
-            <img src={CoffeCup} alt="" className="w-8 " />
-          </Button>  </Link>
+          <Link to="https://www.buymeacoffee.com/favoreliab" target="_blank">
+            <Button className="bg-white text-blueCustom flex flex-row items-center gap-2">
+              Buy Me A Coffee
+              <img src={CoffeCup} alt="" className="w-8 " />
+            </Button>{' '}
+          </Link>
         </div>
         {/* <div className="flex w-10/12 justify-center  flex-col sm:flex-row gap-2 sm:gap-8 items-center">
           <NavLink to="/about" className="font-medium text-lg ">
@@ -44,21 +44,33 @@ const Footer = () => {
           </NavLink>
           <VaulDrawer />
         </div> */}
-        <div className="flex flex-col gap-1 items-start md:items-end w-full mt-2 md:mt-0">
-          <div className="justify-start md:justify-center w-full flex ">Follow me for more</div>
-          <div className="flex gap-4 items-center justify-start md:justify-center   w-full ">
-            <IconMail stroke={1} className="footer_links" />
-            <IconBrandInstagram stroke={1} className="footer_links" />
-            <IconBrandX stroke={1} className="footer_links" />
-            <IconBrandUpwork stroke={1} className="footer_links" />
-            <IconBrandWhatsapp stroke={1} className="footer_links" />
-            <IconBrandGithub stroke={1} className="footer_links" />
+        <div className="flex flex-col gap-1 items-start md:items-center w-full mt-2 md:mt-0 ">
+          <div className="justify-start md:justify-center w-full flex mb-2 ">Follow me </div>
+          <div className="flex  items-center justify-between max-w-[450px]    w-full ">
+            <Link to="mailto:favoureliab@gmail.com">
+              <IconMail stroke={1} className="footer_links" />{' '}
+            </Link>
+            <Link to="https://www.instagram.com/favourelly1" target="_blank">
+              <IconBrandInstagram stroke={1} className="footer_links" />
+            </Link>
+            <Link to="https://www.x.com/favour_eliab" target="_blank">
+              <IconBrandX stroke={1} className="footer_links" />
+            </Link>
+            <Link to="https://www.upwork.com/freelancers/~0164586914ad0010ed" target="_blank">
+              <IconBrandUpwork stroke={1} className="footer_links" />
+            </Link>
+            <Link to="https://www.wa.me/0787922900" target="_blank">
+              <IconBrandWhatsapp stroke={1} className="footer_links" />
+            </Link>
+            <Link to="https://www.github.com/favor-star" target="_blank">
+              <IconBrandGithub stroke={1} className="footer_links" />
+            </Link>
 
             {/* <FloatingDock items={items} /> */}
           </div>
         </div>
         <div className="flex gap-1 items-center justify-center mt-4">
-          <IconCopyright className="w-5" />
+          <IconCopyright stroke={1} className="w-4" />
           <p className="text-sm font-extralight">Favour Eliab {new Date().getFullYear()}.</p>
           <p className="font-thin text-sm">All rights reserved</p>
         </div>

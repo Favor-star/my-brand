@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import ContactMeSection from '../components/ContactMeSection';
 import FAQsSection from '../components/FAQsSection';
 import Footer from '../components/Footer';
@@ -10,6 +11,9 @@ import { motion } from 'framer-motion';
 // import SmoothScroll from '../components/common/SmoothScroll';
 
 const Services = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     // <SmoothScroll>
     <motion.main className="w-full flex flex-col justify-center items-center relative">

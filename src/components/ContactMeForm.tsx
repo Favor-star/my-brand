@@ -12,6 +12,7 @@ import Input from './common/Input';
 import { Button } from './common/button';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ContactMeForm = () => {
   const [isButtonHovered, setIsbuttonHovered] = useState(false);
@@ -37,7 +38,6 @@ const ContactMeForm = () => {
               placeholder="Choose a service"
               className="border border-blackCustom p-3 focus-within:outline-none placeholder:text-blackCustom placeholder:text-opacity-60 border-opacity-50 rounded-lg  w-full"
             /> */}
-         
           </div>
           <div className="w-full">
             <input
@@ -83,10 +83,12 @@ const ContactMeForm = () => {
               dammping: 10
             }}
           >
-            <IconBrandWhatsapp
-              stroke={1}
-              className=" w-10 h-10 md:w-12 md:h-12 p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
-            />
+            <Link to="https://wa.me/0787922900" target="_blank">
+              <IconBrandWhatsapp
+                stroke={1}
+                className=" w-10 h-10 md:w-12 md:h-12 p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
+              />
+            </Link>
           </motion.span>
           <motion.span
             whileHover={{ scale: 1.1 }}
@@ -97,10 +99,12 @@ const ContactMeForm = () => {
               dammping: 10
             }}
           >
-            <IconBrandX
-              stroke={1}
-              className=" w-10 h-10 md:w-12 md:h-12  p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
-            />
+            <Link to="https://www.x.com/favour_eliab" target="_blank">
+              <IconBrandX
+                stroke={1}
+                className=" w-10 h-10 md:w-12 md:h-12  p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
+              />{' '}
+            </Link>
           </motion.span>
           <motion.span
             whileHover={{ scale: 1.1 }}
@@ -125,10 +129,12 @@ const ContactMeForm = () => {
               dammping: 10
             }}
           >
-            <IconBrandGithub
-              stroke={1}
-              className=" w-10 h-10 md:w-12 md:h-12  p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
-            />
+            <Link to="https://github.com/favor-star">
+              <IconBrandGithub
+                stroke={1}
+                className=" w-10 h-10 md:w-12 md:h-12  p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
+              />{' '}
+            </Link>
           </motion.span>
           <motion.span
             whileHover={{ scale: 1.1 }}
@@ -139,10 +145,12 @@ const ContactMeForm = () => {
               dammping: 10
             }}
           >
-            <IconBrandUpwork
-              stroke={1}
-              className=" w-10 h-10 md:w-12 md:h-12  p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
-            />
+            <Link to="https://www.upwork.com/freelancers/~0164586914ad0010ed" target="_blank">
+              <IconBrandUpwork
+                stroke={1}
+                className=" w-10 h-10 md:w-12 md:h-12  p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
+              />
+            </Link>
           </motion.span>
           <motion.span
             whileHover={{ scale: 1.1 }}
@@ -153,10 +161,12 @@ const ContactMeForm = () => {
               dammping: 10
             }}
           >
-            <IconBrandLinkedin
-              stroke={1}
-              className=" w-10 h-10 md:w-12 md:h-12 p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
-            />
+            <Link to="https://www.linkedin.com/in/favour-elly/" target="_blank">
+              <IconBrandLinkedin
+                stroke={1}
+                className=" w-10 h-10 md:w-12 md:h-12 p-1 rounded-md sm:rounded-lg  text-blackCustom  border-blackCustom   border-[1px]"
+              />{' '}
+            </Link>
           </motion.span>
         </div>
       </div>

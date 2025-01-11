@@ -106,7 +106,7 @@ export const Skill = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       <motion.span
-        className=" bg-blueCustom h-full w-full aspect-square absolute top-0 left-0 -z-10"
+        className=" bg-blueCustom h-full w-full aspect-square absolute top-0 left-0 -z-10 select-none"
         layout="position"
         style={{
           clipPath: 'ellipse(50px 50px at 10% 20%)'
@@ -167,10 +167,10 @@ export const Skill = ({
           }
         ></motion.span>
         {/* <IconBrandFigma stroke={0.6} className="w-full h-full" /> */}
-        <span className="w-full h-full">{logo}</span>
+        <span className="w-full h-full select-none">{logo}</span>
       </motion.span>
       <motion.p
-        className="text-blackCustom text-lg capitalize"
+        className="text-blackCustom text-lg capitalize select-none"
         layout="position"
         animate={
           isHovered ? { color: '#fff', transition: { type: 'tween' } } : { color: '#212830' }
@@ -226,17 +226,17 @@ const mainSkills = [
   {
     title: 'JS',
     logo: <IconBrandJavascript stroke={0.6} className="w-full h-full" />,
-    level: 40
+    level: 80
   },
   {
     title: 'Figma',
     logo: <IconBrandFigma stroke={0.6} className="w-full h-full" />,
-    level: 40
+    level: 70
   },
   {
     title: 'CSS3',
     logo: <IconBrandCss3 stroke={0.6} className="w-full h-full" />,
-    level: 50
+    level: 90
   },
   {
     title: 'Tailwind',
@@ -256,12 +256,12 @@ const mainSkills = [
   {
     title: 'TypeScript',
     logo: <IconBrandTypescript stroke={0.6} className="w-full h-full" />,
-    level: 30
+    level: 70
   },
   {
     title: 'WordPress',
     logo: <IconBrandWordpress stroke={0.6} className="w-full h-full" />,
-    level: 30
+    level: 60
   },
   {
     title: 'Framer',
@@ -276,12 +276,12 @@ const mainSkills = [
   {
     title: 'C#',
     logo: <IconBrandCSharp stroke={0.6} className="w-full h-full" />,
-    level: 30
+    level: 45
   },
   {
     title: 'C++',
     logo: <IconBrandCpp stroke={0.6} className="w-full h-full" />,
-    level: 30
+    level: 45
   },
   {
     title: 'Bootstrap',

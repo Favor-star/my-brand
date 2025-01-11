@@ -1,7 +1,6 @@
 import { IconRefresh } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 import { FocusCards } from './FocusCard';
-import { useEffect } from 'react';
 import Image from '../assets/Design 1.png';
 import WCT from '../assets/WCT.png';
 import oldPortfolio from '../assets/oldPortfolio.png';
@@ -16,12 +15,8 @@ const MyWorks = () => {
   const handleViewMore = () => {
     navigate('/portfolio');
   };
-  useEffect(() => {
-    console.log(location.pathname === '/');
 
-    return () => {};
-  }, [location]);
-
+ 
   return (
     <section className="w-full bg-inherit text-blackCustom flex flex-col items-center justify-center px-4 md:py-10 py-5 relative overflow-hidden ">
       <motion.div className="w-[500px] aspect-square bg-blueCustom rounded-full blur-3xl absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  bg-opacity-15 -z-20" />
@@ -77,10 +72,22 @@ export default MyWorks;
 // ];
 
 const cards = [
-  { title: 'wildlifeconservationtravel.com', src: WCT,href:'https://wildlifeconservationtravel.com' },
-  { title: 'Tsinda', src: igaApp ,href:"https://favor-star.github.io/quiz-app/"},
-  { title: 'Iga App', src: Image,href:"https://favor-star.github.io/tsinda/" },
-  { title: 'Countries App', src: countriesApp,href:"https://favor-star.github.io/countries-app/" },
-  { title: 'Outdated Portofolio', src: oldPortfolio ,href: "https://favor-star.github.io/my-brand-favor/"},
-  { title: 'Weather app', src: Weather ,href: "https://favor-star.github.io/weather-app/"}
+  {
+    title: 'wildlifeconservationtravel.com',
+    src: WCT,
+    href: 'https://wildlifeconservationtravel.com'
+  },
+  { title: 'Iga App', src: Image, href: 'https://favor-star.github.io/tsinda/' },
+  { title: 'Tsinda', src: igaApp, href: 'https://favor-star.github.io/quiz-app/' },
+  {
+    title: 'Countries App',
+    src: countriesApp,
+    href: 'https://favor-star.github.io/countries-app/'
+  },
+  {
+    title: 'Outdated Portofolio',
+    src: oldPortfolio,
+    href: 'https://favor-star.github.io/my-brand-favor/'
+  },
+  { title: 'Weather app', src: Weather, href: 'https://favor-star.github.io/weather-app/' }
 ];

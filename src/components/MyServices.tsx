@@ -27,7 +27,7 @@ const MyServices = ({ fromHome = false }: { fromHome?: boolean }) => {
 
     calculateMaxHeight();
     window.addEventListener('resize', calculateMaxHeight);
-
+   
     return () => window.removeEventListener('resize', calculateMaxHeight);
   }, []);
 

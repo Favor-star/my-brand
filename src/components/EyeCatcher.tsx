@@ -18,7 +18,7 @@ const EyeCatcher = () => {
           </p>
         </span>
         <span className="flex flex-col sm:flex-row gap-2 justify-start items-center md:justify-center md:max-w-[240px] w-full">
-          <p className="text-5xl font-semibold">5+</p>
+          <p className="text-5xl font-semibold">2+</p>
           <p className="text-base leading-none">Years of experience spent doing this stuffs</p>
         </span>
       </div>

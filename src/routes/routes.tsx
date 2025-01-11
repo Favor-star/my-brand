@@ -6,6 +6,7 @@ import AboutMe from '../pages/AboutMe';
 import Loader from '../components/animated/Loader';
 import NotFound from '../pages/NotFound';
 
+
 const router = createBrowserRouter([
   {
     path: '/',
