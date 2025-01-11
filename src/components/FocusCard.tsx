@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { IconExternalLink } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 import { cn } from '../utils';
+import { Link } from 'react-router-dom';
 
 export const Card = React.memo(
   ({
@@ -39,7 +40,8 @@ export const Card = React.memo(
       >
         <div className="text-base md:text-lg font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200 flex gap-2">
           {card.title}
-          <IconExternalLink stroke={1.25} className="text-white" />
+          <Link to={card.href} target='_blank'>
+          <IconExternalLink stroke={1.25} className="text-white" />  </Link>
         </div>
       </div>
     </div>

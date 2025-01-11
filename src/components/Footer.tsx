@@ -9,7 +9,7 @@ import {
 } from '@tabler/icons-react';
 import CoffeCup from '../assets/icons/coffee.svg';
 import { Button } from './common/button';
-
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center bg-blackCustom text-white pt-5 pb-3 mt-10">
@@ -22,10 +22,12 @@ const Footer = () => {
         </Link> */}
         <div className="font-light flex flex-row md:flex-row gap-2 items-center ">
           <p className=" text-left text-base md:text-lg">Are you impressed?</p>
+          <Link to="https://www.buymeacoffee.com/favoureliab" target="_blank">
+        
           <Button className="bg-white text-blueCustom flex flex-row items-center gap-2">
             Buy Me A Coffee
             <img src={CoffeCup} alt="" className="w-8 " />
-          </Button>
+          </Button>  </Link>
         </div>
         {/* <div className="flex w-10/12 justify-center  flex-col sm:flex-row gap-2 sm:gap-8 items-center">
           <NavLink to="/about" className="font-medium text-lg ">

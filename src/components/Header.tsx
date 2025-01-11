@@ -7,7 +7,7 @@ import {
 } from '@tabler/icons-react';
 import { Button } from './common/button';
 import { cn } from '../utils';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import HeaderIcon from './common/HeaderIcon';
 import SmallerMenu from './common/SmallerMenu';
 
@@ -24,15 +24,16 @@ const Header = ({ isTextWhite }: HeaderProps) => {
         )}
       >
         <span className="flex gap-2 items-center w-3/4 text-inherit">
+         <Link to={'/'}>
           <p className="p-2 w-10 h-10 rounded-md border border-inherit font-bold text-2xl flex flex-col justify-center items-center aspect-square">
             F
-          </p>
-          <a
-            href="mailto:favoureliab@gmail.com"
+          </p></Link>
+        
+        <Link to={'mailto:favoureliab@gmail.com'} > <p
             className="text-lg font-medium text-inherit hidden sm:block "
           >
-            hire@gmail.com
-          </a>
+            favoureliab@gmail.com
+          </p></Link>
         </span>
         <nav className=" flex-1  items-center gap-4 flex text-inherit justify-between ">
           <ul className="hidden md:flex items-center flex-1 justify-between gap-4 list-none text-inherit">

@@ -4,6 +4,10 @@ import { FocusCards } from './FocusCard';
 import { useEffect } from 'react';
 import Image from '../assets/Design 1.png';
 import WCT from '../assets/WCT.png';
+import oldPortfolio from '../assets/oldPortfolio.png';
+import Weather from '../assets/Weather.png';
+import igaApp from '../assets/igaApp.png';
+import countriesApp from '../assets/countriesApp.png';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from './common/button';
 const MyWorks = () => {
@@ -73,10 +77,10 @@ export default MyWorks;
 // ];
 
 const cards = [
-  { title: 'wildlifeconservationtravel.com', src: WCT },
-  { title: 'Iga App', src: Image },
-  { title: 'Iga App', src: Image },
-  { title: 'iga.com', src: Image },
-  { title: 'iga.com', src: Image },
-  { title: 'iga.com', src: Image }
+  { title: 'wildlifeconservationtravel.com', src: WCT,href:'https://wildlifeconservationtravel.com' },
+  { title: 'Tsinda', src: igaApp ,href:"https://favor-star.github.io/quiz-app/"},
+  { title: 'Iga App', src: Image,href:"https://favor-star.github.io/tsinda/" },
+  { title: 'Countries App', src: countriesApp,href:"https://favor-star.github.io/countries-app/" },
+  { title: 'Outdated Portofolio', src: oldPortfolio ,href: "https://favor-star.github.io/my-brand-favor/"},
+  { title: 'Weather app', src: Weather ,href: "https://favor-star.github.io/weather-app/"}
 ];
