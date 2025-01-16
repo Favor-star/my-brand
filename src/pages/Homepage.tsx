@@ -1,8 +1,8 @@
+import React, { Suspense } from 'react';
 import EyeCatcher from '../components/EyeCatcher';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import MyServices from '../components/MyServices';
-import MyWorks from '../components/MyWorks';
 import EducExp from '../components/EducExp';
 import {
   IconHome,
@@ -20,6 +20,9 @@ import DotPattern from '../components/backgrounds/DotPattern';
 import { cn } from '../utils';
 import HI from '../assets/HI (1).svg';
 import { motion } from 'framer-motion';
+import MyWorksLoader from '../components/MyWorksLoader';
+
+const MyWorks = React.lazy(() => import('../components/MyWorks'));
 
 const Homepage = () => {
   return (
@@ -58,7 +61,9 @@ const Homepage = () => {
       </div>
       {/* </div> */}
       <MyServices fromHome={true} />
-      <MyWorks />
+      <Suspense fallback={<MyWorksLoader />}>
+        <MyWorks />
+      </Suspense>
       <EducExp />
       <OtherSkills fromHome={true} />
       <ReviewSection />
