@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import {  IconX } from '@tabler/icons-react';
+import { IconX } from '@tabler/icons-react';
 import ReactDOM from 'react-dom';
 
 const MyDialog = ({
@@ -32,7 +32,7 @@ const MyDialog = ({
               className="absolute top-2 right-2 cursor-pointer border border-blackCustom text-blackCustom bg-opacity-50 hover:bg-blackCustom hover:text-white hover:rotate-90 transition-all p-1 rounded-lg hover:rounded-xl h-8 w-8 shadow-lg"
               onClick={onClose}
             />
-            <img src={image} className="w-full object-cover shadow-xl" />
+            <img src={image} className="w-full object-cover shadow-xl" loading="lazy" />
           </motion.section>
         </motion.main>
       )}

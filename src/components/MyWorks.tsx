@@ -13,7 +13,11 @@ import { useState } from 'react';
 import { Button } from './common/button';
 import { cn } from '../utils';
 import MyPortfolioDesign from '../assets/MyPortfolioDesign.webp';
-import vShop from "../assets/LANDING PAGE.webp"
+import vShop from '../assets/LANDING PAGE.webp';
+import oldPortfolioDesign from '../assets/OldPortfolioDesign.webp';
+import ECommerce from '../assets/ECommerce.webp';
+import Dashboard from '../assets/Dashboard.webp';
+
 const MyWorks = () => {
   const [filterIndex, setFilterIndex] = useState(0);
   const location = useLocation();
@@ -21,11 +25,28 @@ const MyWorks = () => {
   const handleViewMore = () => {
     navigate('/portfolio');
   };
-  const filteredCards = useMemo(() => {
-    return filterIndex === filterArray.indexOf('All')
-      ? cards
-      : cards.filter((elem) => elem.filter === filterArray[filterIndex]);
-  }, [filterIndex, cards, filterArray]);
+  interface Card {
+    title: string;
+    src: string;
+    href: string;
+    filter: string;
+  }
+
+  const shuffleArray = (array: Card[]): Card[] => {
+    let shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+    return shuffledArray;
+  };
+ const filteredCards = useMemo(() => {
+   const filtered =
+     filterIndex === filterArray.indexOf('All')
+       ? cards
+       : cards.filter((elem) => elem.filter === filterArray[filterIndex]);
+   return shuffleArray(filtered);
+ }, [filterIndex, cards, filterArray]);
 
   return (
     <section className="w-full bg-inherit text-blackCustom flex flex-col items-center justify-center px-4 md:py-10 py-5 relative overflow-hidden ">
@@ -122,6 +143,24 @@ const cards = [
   {
     title: 'Virtual workshop',
     src: vShop,
+    href: '',
+    filter: 'Web Design'
+  },
+  {
+    title: 'Old Portfolio',
+    src: oldPortfolioDesign,
+    href: '',
+    filter: 'Web Design'
+  },
+  {
+    title: 'E-Commerce',
+    src: ECommerce,
+    href: '',
+    filter: 'Web Design'
+  },
+  {
+    title: 'Dashboard',
+    src: Dashboard,
     href: '',
     filter: 'Web Design'
   }
